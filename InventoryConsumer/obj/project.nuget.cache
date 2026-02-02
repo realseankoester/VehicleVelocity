@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "HKpt0K9bxnd0tLdPLCFr7di7+W3a2XY9AuxDMOvccGT5vFNY2CoOHZG0eHT3vLClCBmRpbm3cJ4+/Dcw2QrLkg==",
+  "success": true,
+  "projectFilePath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/InventoryConsumer.csproj",
+  "expectedPackageFiles": [
+    "/home/tsunan/.nuget/packages/confluent.kafka/2.13.0/confluent.kafka.2.13.0.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/librdkafka.redist/2.13.0/librdkafka.redist.2.13.0.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/system.io.pipelines/10.0.2/system.io.pipelines.10.0.2.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/system.text.encodings.web/10.0.2/system.text.encodings.web.10.0.2.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/system.text.json/10.0.2/system.text.json.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

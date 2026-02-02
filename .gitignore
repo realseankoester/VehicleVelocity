@@ -1,0 +1,16 @@
+# .NET ignore
+[Bb]in/
+[Ob]j/
+*.user
+*.userosscache
+*.sln.docuser
+
+# Visual Studio Code
+.vscode/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# App Settings (where we might put DB passwords later)
+appsettings.json
