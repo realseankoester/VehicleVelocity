@@ -14,3 +14,7 @@ Thumbs.db
 
 # App Settings (where we might put DB passwords later)
 appsettings.json
+
+# Secrets
+.env
+*.env

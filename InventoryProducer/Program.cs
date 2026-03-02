@@ -20,7 +20,7 @@ while (true)
 {
     Console.Write("\nEnter VIN (or type 'exit' to quit): ");
     string vin = Console.ReadLine() ?? "";
-    if (vin.ToLower() == "eixt") break;
+    if (vin.ToLower() == "exit") break;
 
     Console.Write("Enter Mileage: ");
     if (!int.TryParse(Console.ReadLine(), out int mileage))
@@ -32,11 +32,16 @@ while (true)
     Console.Write("Enter Status (e.g., Inspection, Repair, Ready): ");
     string status = Console.ReadLine() ?? "Unknown";
 
+    Console.WriteLine("Describe vehicle condition (Keywords: rust, rip, tear, dirt, residue):");
+    Console.Write("> ");
+    string notes = Console.ReadLine() ?? "";
+
     var car = new Vehicle
     {
         Vin = vin,
         Status = status,
         Mileage = mileage,
+        InspectionNotes = notes,
         LastUpdated = DateTime.Now
     };
 

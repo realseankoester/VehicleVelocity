@@ -1,0 +1,157 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/tsunan/workspace/VehicleVelocityProject/InventoryAPI/InventoryAPI.csproj": {}
+  },
+  "projects": {
+    "/home/tsunan/workspace/VehicleVelocityProject/InventoryAPI/InventoryAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/InventoryAPI/InventoryAPI.csproj",
+        "projectName": "InventoryAPI",
+        "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryAPI/InventoryAPI.csproj",
+        "packagesPath": "/home/tsunan/.nuget/packages/",
+        "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tsunan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
+                "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+        "projectName": "VehicleVelocity.Common",
+        "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+        "packagesPath": "/home/tsunan/.nuget/packages/",
+        "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tsunan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.*, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
