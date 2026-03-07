@@ -101,8 +101,11 @@ async Task ProcessCar(Vehicle car)
 {
     // Initialize new Audit Service
     var auditService = new QualityAuditService();
+    var aiVisionService = new ImageAnalysisService();
 
     var audit = await auditService.AnalyzeVehicleAsync(car);
+
+    car.AIAuditNotes = await aiVisionService.AnalyzeImageAsync(car.ImageUrl ?? "");
 
     var retryPolicy = Policy
         .Handle<Exception>()
@@ -118,6 +121,8 @@ async Task ProcessCar(Vehicle car)
     await retryPolicy.ExecuteAsync(async () =>
     {
         using var dbContext = new VehicleDbContext(optionsBuilder.Options);
+
+        // await dbContext.Database.EnsureDeletedAsync();
         await dbContext.Database.EnsureCreatedAsync();
 
         var existingVehicle = await dbContext.Vehicles.FindAsync(car.Vin);
@@ -131,18 +136,19 @@ async Task ProcessCar(Vehicle car)
             existingVehicle.Status = car.Status;
             existingVehicle.InspectionNotes = car.InspectionNotes;
             existingVehicle.LastUpdated = car.LastUpdated;
+            existingVehicle.AIAuditNotes = car.AIAuditNotes;
+            existingVehicle.ImageUrl = car.ImageUrl;
         }
         await dbContext.SaveChangesAsync();
     });
 
-    bool highMileage = car.Mileage > 120000;
+    bool aiFlagged = car.AIAuditNotes.Contains("detected");
 
-    if (audit.NeedsManualReview || highMileage)
+    if (audit.NeedsManualReview || aiFlagged)
     {
-        string reason = audit.NeedsManualReview ? audit.RiskReason : "High Mileage";
-
-        Log.Warning("Audit Flagged: {Vin}. Reason: {Reason}. Score {Score}. Data: {@Vehicle}",
-            car.Vin, reason, audit.QualityScore, car);
+        Log.Warning("!!! AUDIT REQUIRED !!! VIN: {Vin}", car.Vin);
+        Log.Information("-> Text Audit: {Reason}", audit.RiskReason);
+        Log.Information("-> AI Vision {AiNotes}", car.AIAuditNotes);
     } 
     else
     {

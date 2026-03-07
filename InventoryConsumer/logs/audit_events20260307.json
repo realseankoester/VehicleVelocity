@@ -1,0 +1,7 @@
+{"@t":"2026-03-07T08:57:35.0595757Z","@mt":"Inventory GateKeeper starting up..."}
+{"@t":"2026-03-07T08:57:56.5373824Z","@mt":"Inventory GateKeeper starting up..."}
+{"@t":"2026-03-07T09:36:27.1313072Z","@mt":"Inventory GateKeeper starting up..."}
+{"@t":"2026-03-07T09:43:46.6662407Z","@mt":"Inventory GateKeeper starting up..."}
+{"@t":"2026-03-07T09:44:11.7623030Z","@mt":"!!! AUDIT REQUIRED !!! VIN: {Vin}","@l":"Warning","Vin":"APEX-TEST-001"}
+{"@t":"2026-03-07T09:44:11.7645299Z","@mt":"-> Text Audit: {Reason}","Reason":"High Mileage Penalty, Corrosion Detected"}
+{"@t":"2026-03-07T09:44:11.7646558Z","@mt":"-> AI Vision {AiNotes}","AiNotes":"AI detected significant oxidation (Rust)."}

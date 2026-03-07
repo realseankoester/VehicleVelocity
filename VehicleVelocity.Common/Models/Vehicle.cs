@@ -10,6 +10,8 @@ public class Vehicle
     public int Mileage { get; set; }
     public string InspectionNotes { get; set; } = string.Empty;
     public string? RiskReason { get; set; }
+    public string? ImageUrl { get; set; }
+    public string? AIAuditNotes { get; set; } 
 
     private DateTime _lastUpdated = DateTime.UtcNow;
     public DateTime LastUpdated

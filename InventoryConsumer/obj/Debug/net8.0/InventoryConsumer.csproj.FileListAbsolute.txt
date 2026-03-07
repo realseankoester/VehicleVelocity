@@ -131,3 +131,9 @@
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/obj/Debug/net8.0/InventoryConsumer.pdb
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/obj/Debug/net8.0/InventoryConsumer.genruntimeconfig.cache
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/obj/Debug/net8.0/ref/InventoryConsumer.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Polly.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Polly.Core.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.Sinks.File.dll

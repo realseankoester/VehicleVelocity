@@ -37,13 +37,14 @@ while (true)
     string notes = Console.ReadLine() ?? "";
 
     var car = new Vehicle
-    {
-        Vin = vin,
-        Status = status,
-        Mileage = mileage,
-        InspectionNotes = notes,
-        LastUpdated = DateTime.Now
-    };
+{
+    Vin = vin,
+    Status = status,
+    Mileage = mileage,
+    InspectionNotes = notes,
+    ImageUrl = $"https://carvana.com/{notes.Replace(" ", "-")}.jpg",
+    LastUpdated = DateTime.UtcNow
+};
 
     string jsonString = JsonSerializer.Serialize(car);
     await producer.ProduceAsync("inventory-updates", new Message<Null, string> { Value = jsonString });
