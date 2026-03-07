@@ -1,30 +1,27 @@
+using Xunit;
 using VehicleVelocity.Common.Models;
 using VehicleVelocity.Common.Services;
-using Xunit;
+using System.Threading.Tasks;
 
 namespace VehicleVelocity.Tests;
 
-public class InvenotoryTests
+public class UnitTest1
 {
     [Fact]
-    public void HighMileage_Should_RequireSeniorInspection()
-    {
-        var service = new InventoryService();
-        var highMileageCar = new Vehicle { Vin = "TEST!", Mileage = 65000 };
+public async Task AnalyzeVehicle_HighMileageAndRust_ReturnsManualReview()
+{
+    var service = new QualityAuditService();
+    var car = new Vehicle 
+    { 
+        Vin = "TEST1", 
+        Mileage = 130000, 
+        InspectionNotes = "Some rust on the frame" // This drops score to 0
+    }; 
 
-        bool result = service.NeedsSeniorInspection(highMileageCar);
+    var result = await service.AnalyzeVehicleAsync(car);
 
-        Assert.True(result, "A car with 65k miles should return True for senior inspection.");
-    }
-
-    [Fact]
-    public void LowMileage_Should_Not_RequireSeniorInspection()
-    {
-        var service = new InventoryService();
-        var lowMileageCar = new Vehicle { Vin = "TEST2", Mileage = 10000 };
-
-        bool result = service.NeedsSeniorInspection(lowMileageCar);
-
-        Assert.False(result, "A car with 10k miles should return False for senior inspection.");
-    }
+    Assert.True(result.NeedsManualReview); // Score is 0, so 0 < 70 is TRUE
+    Assert.Contains("High Mileage", result.RiskReason);
+    Assert.Contains("Corrosion", result.RiskReason);
+}
 }
