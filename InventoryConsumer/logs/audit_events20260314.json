@@ -1,0 +1,14 @@
+{"@t":"2026-03-14T07:15:55.7977194Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-14T07:15:56.6304946Z","@mt":"Topic Check: {Reason}","Reason":"Topic 'inventory-updates' already exists."}
+{"@t":"2026-03-14T07:15:56.6331310Z","@mt":"--- GateKeeper Active: Monitoring inventory-updates topic ---"}
+{"@t":"2026-03-14T07:16:29.4048943Z","@mt":"⚠️ [ASSISTED PRIORITY] VIN {Vin}: High Risk detected. Alerting Lead Specialist.","@l":"Warning","Vin":"APEX-TEST-001"}
+{"@t":"2026-03-14T07:16:30.3599606Z","@mt":"!!! AUDIT REQUIRED !!! VIN: {Vin} | Priority: {Priority} | Reason: {Reason}","@l":"Warning","Vin":"APEX-TEST-001","Priority":1,"Reason":"Corrosion Detected"}
+{"@t":"2026-03-15T02:50:01.4968174Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-15T02:50:01.5879299Z","@mt":"Database: Checking schema and applying pending migrations..."}
+{"@t":"2026-03-15T02:50:02.3580826Z","@mt":"Database: Schema is up to date."}
+{"@t":"2026-03-15T02:50:03.3701692Z","@mt":"Topic Check: {Reason}","Reason":"Topic 'inventory-updates' already exists."}
+{"@t":"2026-03-15T02:50:03.3734392Z","@mt":"--- GateKeeper Active: Monitoring inventory-updates topic ---"}
+{"@t":"2026-03-15T02:50:25.7858168Z","@mt":"✅ [{Mode}] VIN {Vin} | Score: {Score} | Clean Pass.","Mode":"ASSISTED","Vin":"APEX-TEST-001","Score":100}
+{"@t":"2026-03-15T02:50:58.0440084Z","@mt":"⚠️ [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason} | AI: {AiNotes}","@l":"Warning","Vin":"APEX-TEST-002","Score":0,"Reason":"High Mileage Penalty, Corrosion Detected","AiNotes":"AI detected significant oxidation (Rust)."}
+{"@t":"2026-03-15T02:52:14.1687319Z","@mt":"✅ [{Mode}] VIN {Vin} | Score: {Score} | Clean Pass.","Mode":"ASSISTED","Vin":"APEX-TEST-001","Score":100}
+{"@t":"2026-03-15T02:53:21.5192374Z","@mt":"✅ [{Mode}] VIN {Vin} | Score: {Score} | Clean Pass.","Mode":"ASSISTED","Vin":"APEX-TEST-002","Score":70}

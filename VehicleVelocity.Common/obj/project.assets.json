@@ -33,11 +33,11 @@
           "lib/net8.0/EFCore.NamingConventions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/8.0.24": {
+      "Microsoft.EntityFrameworkCore/8.0.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.24",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.24",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.10",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.10",
           "Microsoft.Extensions.Caching.Memory": "8.0.1",
           "Microsoft.Extensions.Logging": "8.0.1"
         },
@@ -55,7 +55,7 @@
           "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.24": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.10": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
@@ -68,7 +68,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.24": {
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.10": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -77,10 +77,10 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/8.0.24": {
+      "Microsoft.EntityFrameworkCore.Relational/8.0.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.24",
+          "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "compile": {
@@ -363,7 +363,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Npgsql/8.0.6": {
+      "Npgsql/8.0.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
@@ -379,13 +379,13 @@
           }
         }
       },
-      "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.11": {
+      "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.11",
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.11",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.11",
-          "Npgsql": "8.0.6"
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.10",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.10",
+          "Npgsql": "8.0.5"
         },
         "compile": {
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
@@ -1657,10 +1657,10 @@
         "lib/net8.0/EFCore.NamingConventions.dll"
       ]
     },
-    "Microsoft.EntityFrameworkCore/8.0.24": {
-      "sha512": "Jf82MqfFU3Nte4Cpmtq5HXhQfXHYhJawFawWuy281uiibg/Ch9z9D/gMnORFhjmGSxzSA4CmRaHwDm2lU9H/ZA==",
+    "Microsoft.EntityFrameworkCore/8.0.10": {
+      "sha512": "PPkQdIqfR1nU3n6YgGGDk8G+eaYbaAKM1AzIQtlPNTKf10Osg3N9T+iK9AlnSA/ujsK00flPpFHVfJrbuBFS1A==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/8.0.24",
+      "path": "microsoft.entityframeworkcore/8.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1669,14 +1669,14 @@
         "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props",
         "lib/net8.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.8.0.24.nupkg.sha512",
+        "microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.24": {
-      "sha512": "epzWc4RnG6aQS+MfIK1gg1XbL8ZTYgKtW8L1lDVHG4C3nilLd6tX8moX6Sv8sXQkH/tMhWhT2e4Nm811kYeoxg==",
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.10": {
+      "sha512": "FV0QlcX9INY4kAD2o72uPtyOh0nZut2jB11Jf9mNYBtHay8gDLe+x4AbXFwuQg+eSvofjT7naV82e827zGfyMg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.24",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1684,14 +1684,14 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.8.0.24.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.24": {
-      "sha512": "nuMx9iCGkZgHvPKlnrYBjlxRgy8VDe443H0PbiDUvxQ8+4nC5JYhqQ9u5lg+FssnTh+QyvwVVVHvkCyAnrpajA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.10": {
+      "sha512": "51KkPIc0EMv/gVXhPIUi6cwJE9Mvh+PLr4Lap4naLcsoGZ0lF2SvOPgUUprwRV3MnN7nyD1XPhT5RJ/p+xFAXw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.24",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1699,14 +1699,14 @@
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "docs/PACKAGE.md",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.8.0.24.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.8.0.10.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/8.0.24": {
-      "sha512": "QMGORS3ltx2RWHBCUcBjadS0eNYGkTGXsOdZf3oSM6pZuNBBl16z6gThA3a+BF8T5HY3jThxVDFKaPHxmpueXA==",
+    "Microsoft.EntityFrameworkCore.Relational/8.0.10": {
+      "sha512": "OefBEE47kGKPRPV3OT+FAW6o5BFgLk2D9EoeWVy7NbOepzUneayLQxbVE098FfedTyMwxvZQoDD9LrvZc3MadA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/8.0.24",
+      "path": "microsoft.entityframeworkcore.relational/8.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1714,7 +1714,7 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.8.0.24.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.8.0.10.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
@@ -2148,10 +2148,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Npgsql/8.0.6": {
-      "sha512": "KaS6CY5kY2Sd0P00MSeFcOI3t2DiQ4UWG8AuRpVOUeDWITOKfoEEG91DP3cmT6aerixPkjwKgXxnpDxIkDpO6g==",
+    "Npgsql/8.0.5": {
+      "sha512": "zRG5V8cyeZLpzJlKzFKjEwkRMYIYnHWJvEor2lWXeccS2E1G2nIWYYhnukB51iz5XsWSVEtqg3AxTWM0QJ6vfg==",
       "type": "package",
-      "path": "npgsql/8.0.6",
+      "path": "npgsql/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2166,22 +2166,22 @@
         "lib/netstandard2.0/Npgsql.xml",
         "lib/netstandard2.1/Npgsql.dll",
         "lib/netstandard2.1/Npgsql.xml",
-        "npgsql.8.0.6.nupkg.sha512",
+        "npgsql.8.0.5.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
     },
-    "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.11": {
-      "sha512": "leShR/O/nSIS3Jpj8yUBmkzaXzBbtlV326+MYkX2BwAj2qSNrUv/H6m8G9Hnv2zUkQYccTpmV5jIVq5vdciEUA==",
+    "Npgsql.EntityFrameworkCore.PostgreSQL/8.0.10": {
+      "sha512": "gFPl9Dmxih7Yi4tZ3bITzZFzbxFMBx04gqTqcjoL2r5VEW+O2TA5UVw/wm/XW26NAJ7sg59Je0+9QrwiZt6MPQ==",
       "type": "package",
-      "path": "npgsql.entityframeworkcore.postgresql/8.0.11",
+      "path": "npgsql.entityframeworkcore.postgresql/8.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
         "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.xml",
-        "npgsql.entityframeworkcore.postgresql.8.0.11.nupkg.sha512",
+        "npgsql.entityframeworkcore.postgresql.8.0.10.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
       ]
@@ -5378,9 +5378,9 @@
     "net8.0": [
       "DotNetEnv >= 3.1.1",
       "EFCore.NamingConventions >= 8.0.3",
-      "Microsoft.EntityFrameworkCore >= 8.0.*",
-      "Microsoft.EntityFrameworkCore.Relational >= 8.0.*",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.*"
+      "Microsoft.EntityFrameworkCore >= 8.0.10",
+      "Microsoft.EntityFrameworkCore.Relational >= 8.0.10",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.10"
     ]
   },
   "packageFolders": {
@@ -5430,15 +5430,15 @@
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[8.0.*, )"
+            "version": "[8.0.10, )"
           },
           "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
-            "version": "[8.0.*, )"
+            "version": "[8.0.10, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
-            "version": "[8.0.*, )"
+            "version": "[8.0.10, )"
           }
         },
         "imports": [
@@ -5457,7 +5457,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -6,26 +6,38 @@ using VehicleVelocity.Common.Models;
 
 namespace VehicleVelocity.Common.Services
 {
+    /// <summary>
+    /// Service interface for analyzing vehicle integrity and risk factors.
+    /// </summary>
     public interface IQualityAuditService
     {
+        /// <summary>
+        /// Analyzes a vehicle's telemetry and notes to determine quality metrics.
+        /// </summary>
         Task<AuditResult> AnalyzeVehicleAsync(Vehicle car);
     }
 
     public class AuditResult
     {
         public bool NeedsManualReview { get; set; }
-        public string RiskReason { get; set; }
+        public string RiskReason { get; set; } = string.Empty;
         public int QualityScore { get; set; } // 1-100
+        public int PriorityLevel {get; set; } // 1 (Critical) to 3 (Standard)
     }
-
+    
     public class QualityAuditService : IQualityAuditService
     {
+        /// <summary>
+        /// Evaluates vehicle health based on intake telemetry and keyword sentiment.
+        /// Processes raw intake data to produce a standardized QualityScore and PriorityLevel.
+        /// </summary>
+        /// <param name="car">The vehicle instance to be analyzed.</param>
+        /// <returns>An AuditResult enriched with processed metrics.</returns>
         public async Task<AuditResult> AnalyzeVehicleAsync(Vehicle car)
         {
-            // This is where a call to Azure OpenAI or a machine learning model would happen.
-            // For demo, use "Keyword Sentiment Analysis" to simulate AI.
-
-            await Task.Delay(100); // Simulate network latency to an AI API
+            // Placeholder for advanced AI/ML model integration.
+            // Currently implements heuristic-based keyword sentiment analysis.
+            await Task.Delay(100);
 
            int currentScore = 100;
            var reasons = new List<string>();
@@ -39,7 +51,7 @@ namespace VehicleVelocity.Common.Services
                 reasons.Add("High Mileage Penalty");
             }
 
-            // Keyword Search
+            // Keyword Sentiment Analysis
             if (notes.Contains("rust"))
             {
                 currentScore -= 70;
@@ -58,11 +70,20 @@ namespace VehicleVelocity.Common.Services
                 reasons.Add("Interior or exterior could use cleaning");
             }
 
+            // Calculate Priority Level based on final score
+            int priority = currentScore switch
+            {
+                < 60 => 1, // Critical
+                < 85 => 2, // High
+                _    => 3  // Standard
+            };
+
             return new AuditResult
             {
-                QualityScore = currentScore,
-                NeedsManualReview = currentScore < 70, // Any score below 70 flags for manual review
-                RiskReason = string.Join(", ", reasons)
+                QualityScore = Math.Max(0, currentScore), // Ensure score doesn't go negative
+                NeedsManualReview = currentScore < 70,
+                RiskReason = reasons.Count > 0 ? string.Join(", ", reasons) : "Clear",
+                PriorityLevel = priority
             };
         }
     }

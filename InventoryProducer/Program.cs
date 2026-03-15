@@ -6,49 +6,50 @@ var config = new ProducerConfig
 { 
     BootstrapServers = "127.0.0.1:9092",
     AllowAutoCreateTopics = true,
-    SocketKeepaliveEnable = true,
-    SocketTimeoutMs = 60000,
-    MetadataMaxAgeMs = 180000
+    SocketKeepaliveEnable = true
 };
 
 using var producer = new ProducerBuilder<Null, string>(config).Build();
 
-Console.WriteLine("--- VehicleVelocity Inventory Input System ---");
+Console.WriteLine("--- 🛡️ VehicleVelocity Inventory Input System ---");
 
+// 1. VIN Validation
+string vin;
+do {
+    Console.Write("Enter VIN: ");
+    vin = Console.ReadLine()?.ToUpper().Trim() ?? "";
+} while (string.IsNullOrEmpty(vin));
 
-while (true)
-{
-    Console.Write("\nEnter VIN (or type 'exit' to quit): ");
-    string vin = Console.ReadLine() ?? "";
-    if (vin.ToLower() == "exit") break;
-
+// 2. Mileage Validation
+int mileage;
+string mileageInput;
+do {
     Console.Write("Enter Mileage: ");
-    if (!int.TryParse(Console.ReadLine(), out int mileage))
-    {
-        Console.WriteLine("Invalid mileage. Please enter a number.");
-        continue;
-    }
+    mileageInput = Console.ReadLine() ?? "";
+} while (!int.TryParse(mileageInput, out mileage) || mileage < 0);
 
-    Console.Write("Enter Status (e.g., Inspection, Repair, Ready): ");
-    string status = Console.ReadLine() ?? "Unknown";
+// 3. Inspection Notes (CRITICAL: This drives the AI logic!)
+Console.Write("Enter Inspection Notes (e.g. 'rust', 'cracked windshield', 'clean'): ");
+string notes = Console.ReadLine() ?? "clean";
 
-    Console.WriteLine("Describe vehicle condition (Keywords: rust, rip, tear, dirt, residue):");
-    Console.Write("> ");
-    string notes = Console.ReadLine() ?? "";
+// 4. Deployment Phase
+int phase;
+do {
+    Console.Write("Enter Deployment Phase (1=Passive, 2=Assisted): ");
+} while (!int.TryParse(Console.ReadLine(), out phase) || (phase != 1 && phase != 2));
 
-    var car = new Vehicle
+var car = new Vehicle
 {
     Vin = vin,
-    Status = status,
     Mileage = mileage,
     InspectionNotes = notes,
-    ImageUrl = $"https://carvana.com/{notes.Replace(" ", "-")}.jpg",
+    DeploymentPhase = phase,
+    IsHighPriorityAudit = false, 
+    ImageUrl = $"https://carvana.com/mock-storage/{notes.Replace(" ", "-")}.jpg",
     LastUpdated = DateTime.UtcNow
 };
 
-    string jsonString = JsonSerializer.Serialize(car);
-    await producer.ProduceAsync("inventory-updates", new Message<Null, string> { Value = jsonString });
+string jsonString = JsonSerializer.Serialize(car);
+await producer.ProduceAsync("inventory-updates", new Message<Null, string> { Value = jsonString });
 
-    Console.WriteLine($">>> Dispatched {vin} to Kafka.");
-
-}
+Console.WriteLine($"\n✅ SUCCESS: Dispatched {vin} to Kafka for { (phase == 1 ? "Passive Monitoring" : "Assisted Auditing") }.");

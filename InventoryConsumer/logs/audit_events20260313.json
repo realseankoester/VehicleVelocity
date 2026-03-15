@@ -1,0 +1,7 @@
+{"@t":"2026-03-14T06:27:09.2954902Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-14T06:27:09.5879613Z","@mt":"--- GateKeeper Active: Monitoring inventory-updates topic ---"}
+{"@t":"2026-03-14T06:27:10.4952524Z","@mt":"Stream error: Subscribed topic not available: inventory-updates: Broker: Unknown topic or partition","@l":"Error"}
+{"@t":"2026-03-14T06:28:39.9705032Z","@mt":"⚠️[ASSISTED PRIORITY] VIN {Vin}: High Risk detected. Alerting Lead Specialist.","@l":"Warning","Vin":"APEX-TEST-001"}
+{"@t":"2026-03-14T06:28:40.8869876Z","@mt":"!!! AUDIT REQUIRED !!! VIN: {Vin} | Priority: {Priority} | Reason: {Reason}","@l":"Warning","Vin":"APEX-TEST-001","Priority":1,"Reason":"Corrosion Detected"}
+{"@t":"2026-03-14T06:43:48.4405755Z","@mt":"✅ [ASSISTED PASS] VIN {Vin}: Low-risk. Inspection continues without interruption.","Vin":"APEX-TEST-002"}
+{"@t":"2026-03-14T06:43:48.5633246Z","@mt":"PASS: {Vin} cleared quality gates. Priority: {Priority}","Vin":"APEX-TEST-002","Priority":3}

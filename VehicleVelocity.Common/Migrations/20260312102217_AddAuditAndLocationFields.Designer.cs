@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using VehicleVelocity.Common.Data;
@@ -11,9 +12,11 @@ using VehicleVelocity.Common.Data;
 namespace VehicleVelocity.Common.Migrations
 {
     [DbContext(typeof(VehicleDbContext))]
-    partial class VehicleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260312102217_AddAuditAndLocationFields")]
+    partial class AddAuditAndLocationFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,18 +28,16 @@ namespace VehicleVelocity.Common.Migrations
             modelBuilder.Entity("VehicleVelocity.Common.Models.Vehicle", b =>
                 {
                     b.Property<string>("Vin")
-                        .HasMaxLength(17)
-                        .HasColumnType("character varying(17)")
+                        .HasColumnType("text")
                         .HasColumnName("vin");
 
                     b.Property<string>("AIAuditNotes")
                         .HasColumnType("text")
                         .HasColumnName("ai_audit_notes");
 
-                    b.Property<string>("AuditRecommendation")
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)")
-                        .HasColumnName("audit_recommendation");
+                    b.Property<double?>("ConfidenceScore")
+                        .HasColumnType("double precision")
+                        .HasColumnName("confidence_score");
 
                     b.Property<int>("DeploymentPhase")
                         .HasColumnType("integer")
@@ -48,13 +49,8 @@ namespace VehicleVelocity.Common.Migrations
 
                     b.Property<string>("InspectionNotes")
                         .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("character varying(1000)")
+                        .HasColumnType("text")
                         .HasColumnName("inspection_notes");
-
-                    b.Property<bool>("IsHighPriorityAudit")
-                        .HasColumnType("boolean")
-                        .HasColumnName("is_high_priority_audit");
 
                     b.Property<bool>("IsLeadOverride")
                         .HasColumnType("boolean")
@@ -80,6 +76,10 @@ namespace VehicleVelocity.Common.Migrations
                         .HasColumnType("text")
                         .HasColumnName("model");
 
+                    b.Property<bool>("NeedsManualReview")
+                        .HasColumnType("boolean")
+                        .HasColumnName("needs_manual_review");
+
                     b.Property<string>("OverrideReason")
                         .HasColumnType("text")
                         .HasColumnName("override_reason");
@@ -101,9 +101,13 @@ namespace VehicleVelocity.Common.Migrations
                         .HasColumnName("risk_reason");
 
                     b.Property<string>("ShadowAction")
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)")
+                        .HasColumnType("text")
                         .HasColumnName("shadow_action");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("status");
 
                     b.Property<int>("Year")
                         .HasColumnType("integer")
@@ -111,9 +115,6 @@ namespace VehicleVelocity.Common.Migrations
 
                     b.HasKey("Vin")
                         .HasName("pk_vehicles");
-
-                    b.HasIndex("IsHighPriorityAudit")
-                        .HasDatabaseName("ix_vehicles_is_high_priority_audit");
 
                     b.ToTable("vehicles", (string)null);
                 });

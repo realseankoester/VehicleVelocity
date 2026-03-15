@@ -1,21 +1,27 @@
-# VehicleVelocity: AI-Driven Inventory Audit Pipeline
+# VehicleVelocity - GateKeeper Service
 
-A high-performance, real-time microservices architecture designed to automate vehicle intake and quality auditing. Built with scalability and AI-integration at its core.
+An event-driven auditing system that monitors vehicle intake telemetry via Kafka and performs automated quality assessments using a heuristic AI engine.
 
-## 🚀 Key Features
-* **Real-Time Streaming:** Leverages **Apache Kafka** to decouple vehicle intake (Producer) from audit processing (Consumer).
-* **AI Vision Integration:** Features an extensible `IImageAnalysisService` that flags structural damage (Rust, Dents, Cracks) using image metadata.
-* **Fault Tolerance:** Implemented **Polly Retry Policies** with exponential backoff to handle transient database contention.
-* **Cloud-Native Stack:** Developed using .NET 8, PostgreSQL, and Docker Compose for seamless environment parity.
+## 🚀 System Architecture
+- **Producer:** Simulates vehicle intake data and publishes to Kafka.
+- **Consumer (GateKeeper):** Processes event streams, performs multi-stage audits, and persists results.
+- **Data Store:** PostgreSQL with Snake Case naming conventions.
+- **Resilience:** Implements Polly retry policies for database persistence.
 
-## 🛠 Tech Stack
-* **Language:** C# / .NET 8
-* **Message Broker:** Confluent Kafka
-* **Database:** PostgreSQL (via Entity Framework Core)
-* **Infrastructure:** Docker & Docker Compose
-* **Resiliency:** Polly (Retry/Jitter)
+## 🛠️ Key Features
+- **Automated Risk Scoring:** Evaluates vehicles based on mileage, structural integrity, and cosmetic notes.
+- **Dual-Phase Deployment:** - **Phase 1 (Shadow):** Logs AI insights without affecting the pipeline.
+    - **Phase 2 (Assisted):** Flags high-priority vehicles for manual specialist review.
+- **Persistence Logic:** Efficient "Upsert" logic using Entity Framework Core.
+- **Structured Logging:** JSON-formatted logs via Serilog for audit trail tracking.
 
-## 🏗 System Architecture
-1. **Producer:** Simulates vehicle intake and publishes JSON events to the `inventory-updates` topic.
-2. **Kafka:** Acts as the distributed log, ensuring message persistence.
-3. **Consumer (The Gatekeeper):** Subscribes to updates, runs a Dual-Audit (Text Logic + AI Vision), and persists results to PostgreSQL.
+## 🚦 Getting Started
+
+1. **Environment Setup:**
+   - Rename `.env.example` to `.env` and provide your `DB_PASSWORD`.
+   - Ensure Docker is running with Kafka and PostgreSQL.
+
+2. **Database Migration:**
+   ```bash
+   cd VehicleVelocity.Common
+   dotnet ef database update --startup-project ../VehicleVelocity.Consumer
