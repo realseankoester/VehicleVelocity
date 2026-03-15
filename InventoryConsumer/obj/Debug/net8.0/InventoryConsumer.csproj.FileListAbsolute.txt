@@ -30,6 +30,12 @@
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Mono.TextTemplating.dll
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Npgsql.dll
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Polly.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Polly.Core.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Serilog.Sinks.File.dll
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/Sprache.dll
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/System.CodeDom.dll
 /home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/bin/Debug/net8.0/System.Composition.AttributedModel.dll

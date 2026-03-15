@@ -1,152 +1,146 @@
 ﻿using Confluent.Kafka;
 using Confluent.Kafka.Admin;
 using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using VehicleVelocity.Common.Models;
 using VehicleVelocity.Common.Services;
-using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
 using VehicleVelocity.Common.Data;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Query;
 using Polly;
-using Polly.Retry;
 using Serilog;
 using Serilog.Formatting.Compact;
-using Microsoft.VisualBasic;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
-// 1. Force a clean load
+// 1. Configuration & Environment Setup
 DotNetEnv.Env.Load();
 var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD")?.Trim().Replace("\r", "").Replace("\n", "");
-
-// 2. Direct String Construction (Avoids .Replace issues)
 var connectionString = $"Host=localhost;Database=inventory_db;Username=admin;Password={dbPassword}";
 
-// 3. Debug - Check if we are sending the literal word "PLACEHOLDER"
-if (connectionString.Contains("PLACEHOLDER")) 
-{
-    Console.WriteLine("CRITICAL ERROR: Password was not replaced!");
-}
-
-Console.WriteLine($"DEBUG: Connection String built. Length: {connectionString.Length}");
-
+// 2. Structured Logging Setup
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
     .WriteTo.File(new CompactJsonFormatter(), "logs/audit_events.json", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-Log.Information("Inventory GateKeeper starting up...");
+Log.Information("VehicleVelocity GateKeeper: Initializing Event Stream Listener");
 
+// 3. Database & Kafka Configuration
 var optionsBuilder = new DbContextOptionsBuilder<VehicleDbContext>();
 optionsBuilder.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
+
+// Startup Migration (Run once)
+using (var startupContext = new VehicleDbContext(optionsBuilder.Options))
+{
+    await startupContext.Database.MigrateAsync();
+}
 
 var config = new ConsumerConfig
 {
     BootstrapServers = "127.0.0.1:9092",
     GroupId = "inventory-gatekeeper-group",
     AutoOffsetReset = AutoOffsetReset.Earliest,
-    SocketKeepaliveEnable = true,
-    SocketTimeoutMs = 60000,
-    MetadataMaxAgeMs = 180000
+    EnableAutoCommit = true,
+    SessionTimeoutMs = 45000
 };
 
-using var consumer = new ConsumerBuilder<Confluent.Kafka.Ignore, string>(config).Build();
+using var consumer = new ConsumerBuilder<Ignore, string>(config).Build();
 consumer.Subscribe("inventory-updates");
 
-Console.WriteLine("--- Inventory GateKeeper: Monitoring Stream ---");
+// 4. Main Consumption Loop
+var cts = new CancellationTokenSource();
+Console.CancelKeyPress += (_, e) => { e.Cancel = true; cts.Cancel(); };
 
-using var adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = "localhost:9092" }).Build();
-
-try {
-    await adminClient.CreateTopicsAsync(new TopicSpecification[] { 
-        new TopicSpecification { Name = "inventory-updates", ReplicationFactor = 1, NumPartitions = 1 } 
-    });
-    Console.WriteLine("Topic 'inventory-updates' created successfully.");
-}
-catch (CreateTopicsException e) {
-    Console.WriteLine($"Topic might already exist: {e.Results[0].Error.Reason}");
-}
-
-while (true)
+try
 {
-    try
+    while (!cts.IsCancellationRequested)
     {
-        // Add a small timeout (e.g., 1 second) so it doesn't block forever if the topic is still warming up
-        var result = consumer.Consume(TimeSpan.FromSeconds(1));
-
-        if (result == null) continue; // No message yet, loop back and try again
-
-        string jsonString = result.Message.Value;
-        var car = JsonSerializer.Deserialize<Vehicle>(jsonString);
-
-        if (car != null)
+        try
         {
-            ProcessCar(car).GetAwaiter().GetResult();
+            // By passing the token here, it throws the exception we want to catch outside
+            var result = consumer.Consume(cts.Token);
+            if (result == null) continue;
+
+            var car = JsonSerializer.Deserialize<Vehicle>(result.Message.Value);
+            if (car != null)
+            {
+                await ProcessCar(car, optionsBuilder.Options);
+            }
+        }
+        catch (ConsumeException e) when (e.Error.Code == ErrorCode.UnknownTopicOrPart)
+        {
+            Log.Information("Waiting for Kafka topic 'inventory-updates'...");
+            // Use Task.Delay with the token to allow immediate exit if Ctrl+C is hit here
+            await Task.Delay(5000, cts.Token);
+        }
+        catch (Exception ex) when (!(ex is OperationCanceledException)) 
+        {
+            // This 'when' clause is the secret sauce. 
+            // It prevents the "Operation Canceled" from being logged as a scary red Error.
+            Log.Error(ex, "Error during consumption or processing");
+            await Task.Delay(1000, cts.Token);
         }
     }
-    catch (ConsumeException e) when (e.Error.Code == ErrorCode.UnknownTopicOrPart)
-    {
-        // This is exactly what's happening now. We just wait.
-        Console.WriteLine("Topic is still initializing... waiting 2 seconds.");
-        Thread.Sleep(2000);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error: {ex.Message}");
-    }
+}
+catch (OperationCanceledException) 
+{ 
+    Log.Information("GateKeeper: Shutdown signal received. Closing connection..."); 
+}
+finally 
+{ 
+    consumer.Close(); 
+    Log.Information("GateKeeper: Connection closed. Goodbye!");
 }
 
-async Task ProcessCar(Vehicle car)
+// 5. Audit & Persistence Logic
+async Task ProcessCar(Vehicle car, DbContextOptions<VehicleDbContext> dbOptions)
 {
-    // Initialize new Audit Service
+    // Scouring & Scrubbing
+    car.Vin = car.Vin?.ToUpper().Trim() ?? "UNKNOWN-VIN";
+    car.InspectionNotes = car.InspectionNotes ?? "Clean/No notes";
+
     var auditService = new QualityAuditService();
+    var aiVisionService = new ImageAnalysisService(); 
 
+    // Perform Automated Audits
     var audit = await auditService.AnalyzeVehicleAsync(car);
+    car.AIAuditNotes = await aiVisionService.AnalyzeImageAsync(car.ImageUrl ?? "");
+    
+    // Map Audit Results
+    car.QualityScore = audit.QualityScore;
+    car.PriorityLevel = audit.PriorityLevel;
+    car.RiskReason = audit.RiskReason;
+    car.IsHighPriorityAudit = audit.IsHighPriorityAudit; 
 
-    var retryPolicy = Policy
-        .Handle<Exception>()
-        .WaitAndRetryAsync(3, retryAttempt =>
-            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-            (exception, timeSpan, retryCount, context) =>
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine($"[RETRY] Database busy. Attempt {retryCount}. Waiting {timeSpan.TotalSeconds}s...");
-                Console.ResetColor();
-            });
+    if (car.DeploymentPhase == 2) // Assisted Mode logic
+    {
+        car.AuditRecommendation = car.IsHighPriorityAudit ? $"PRIORITY: {audit.RiskReason}" : "Standard Intake";
+    }
+    else // Passive Mode logic
+    {
+        car.IsHighPriorityAudit = false; 
+        car.ShadowAction = $"AI Insight: {audit.RiskReason}";
+    }
+
+    // Logging
+    if (car.IsHighPriorityAudit)
+        Log.Warning("⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}", car.Vin, car.QualityScore, car.RiskReason);
+    else
+        Log.Information("✅ [PASS] VIN {Vin} | Score: {Score}", car.Vin, car.QualityScore);
+
+    // Database Persistence with Polly
+    var retryPolicy = Policy.Handle<Exception>()
+        .WaitAndRetryAsync(3, i => TimeSpan.FromSeconds(Math.Pow(2, i)));
 
     await retryPolicy.ExecuteAsync(async () =>
     {
-        using var dbContext = new VehicleDbContext(optionsBuilder.Options);
-        await dbContext.Database.EnsureCreatedAsync();
-
-        var existingVehicle = await dbContext.Vehicles.FindAsync(car.Vin);
-        if (existingVehicle == null)
-        {
-            dbContext.Vehicles.Add(car);
-        }
-        else
-        {
-            existingVehicle.Mileage = car.Mileage;
-            existingVehicle.Status = car.Status;
-            existingVehicle.InspectionNotes = car.InspectionNotes;
-            existingVehicle.LastUpdated = car.LastUpdated;
-        }
+        using var dbContext = new VehicleDbContext(dbOptions);
+        var existing = await dbContext.Vehicles.FindAsync(car.Vin);
+        if (existing == null) dbContext.Vehicles.Add(car);
+        else dbContext.Entry(existing).CurrentValues.SetValues(car);
         await dbContext.SaveChangesAsync();
     });
-
-    bool highMileage = car.Mileage > 120000;
-
-    if (audit.NeedsManualReview || highMileage)
-    {
-        string reason = audit.NeedsManualReview ? audit.RiskReason : "High Mileage";
-
-        Log.Warning("Audit Flagged: {Vin}. Reason: {Reason}. Score {Score}. Data: {@Vehicle}",
-            car.Vin, reason, audit.QualityScore, car);
-    } 
-    else
-    {
-        Log.Information("Auto-Pass: {Vin} cleared quality gates.", car.Vin);  
-    }
-    
 }
