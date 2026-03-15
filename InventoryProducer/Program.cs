@@ -1,53 +1,65 @@
 ﻿using Confluent.Kafka;
+using System;
 using System.Text.Json;
+using System.Threading.Tasks;
 using VehicleVelocity.Common.Models;
 
-var config = new ProducerConfig 
-{ 
-    BootstrapServers = "127.0.0.1:9092",
-    AllowAutoCreateTopics = true,
-    SocketKeepaliveEnable = true,
-    SocketTimeoutMs = 60000,
-    MetadataMaxAgeMs = 180000
+// 1. Kafka Configuration
+var config = new ProducerConfig
+{
+    BootstrapServers = "localhost:9092",
+    Acks = Acks.All, // Ensure "GateKeeper" receives the message
+    MessageSendMaxRetries = 3,
+    RetryBackoffMs = 500
 };
 
 using var producer = new ProducerBuilder<Null, string>(config).Build();
+string topic = "inventory-updates";
 
-Console.WriteLine("--- VehicleVelocity Inventory Input System ---");
-
+Console.WriteLine("--- VehicleVelocity: Intake Terminal (Producer) ---");
+Console.WriteLine("Direct Entry Mode: Enter VIN to begin or 'exit' to quit.");
 
 while (true)
 {
-    Console.Write("\nEnter VIN (or type 'exit' to quit): ");
-    string vin = Console.ReadLine() ?? "";
-    if (vin.ToLower() == "exit") break;
-
-    Console.Write("Enter Mileage: ");
-    if (!int.TryParse(Console.ReadLine(), out int mileage))
+    try 
     {
-        Console.WriteLine("Invalid mileage. Please enter a number.");
-        continue;
+        // 2. Direct VIN Prompt (with Exit check)
+        Console.Write("\nEnter VIN (or 'exit'): ");
+        var vin = Console.ReadLine() ?? "";
+
+        if (vin.ToLower() == "exit") break;
+        if (string.IsNullOrWhiteSpace(vin)) continue;
+
+        // 3. Capture Remaining Intake Data
+        Console.Write("Enter Mileage: ");
+        int.TryParse(Console.ReadLine(), out int mileage);
+
+        Console.Write("Enter Inspection Notes (e.g., 'rust', 'rip', 'clean'): ");
+        var notes = Console.ReadLine() ?? "";
+
+        Console.Write("Deployment Phase (1=Passive, 2=Assisted): ");
+        int.TryParse(Console.ReadLine(), out int phase);
+
+        // 4. Construct the Vehicle Object
+        var vehicle = new Vehicle
+        {
+            Vin = vin.ToUpper(), // Standardize to uppercase
+            Mileage = mileage,
+            InspectionNotes = notes,
+            DeploymentPhase = (phase == 2) ? 2 : 1, 
+            LastUpdated = DateTime.UtcNow
+        };
+
+        // 5. Serialize and Send to Kafka
+        var messageValue = JsonSerializer.Serialize(vehicle);
+        var deliveryResult = await producer.ProduceAsync(topic, new Message<Null, string> { Value = messageValue });
+
+        Console.WriteLine($"[SUCCESS] {vehicle.Vin} sent to {deliveryResult.TopicPartitionOffset}");
     }
-
-    Console.Write("Enter Status (e.g., Inspection, Repair, Ready): ");
-    string status = Console.ReadLine() ?? "Unknown";
-
-    Console.WriteLine("Describe vehicle condition (Keywords: rust, rip, tear, dirt, residue):");
-    Console.Write("> ");
-    string notes = Console.ReadLine() ?? "";
-
-    var car = new Vehicle
+    catch (Exception ex)
     {
-        Vin = vin,
-        Status = status,
-        Mileage = mileage,
-        InspectionNotes = notes,
-        LastUpdated = DateTime.Now
-    };
-
-    string jsonString = JsonSerializer.Serialize(car);
-    await producer.ProduceAsync("inventory-updates", new Message<Null, string> { Value = jsonString });
-
-    Console.WriteLine($">>> Dispatched {vin} to Kafka.");
-
+        Console.WriteLine($"[ERROR] Pipeline disruption: {ex.Message}");
+    }
 }
+
+Console.WriteLine("Intake Terminal Closed.");

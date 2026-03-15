@@ -42,6 +42,7 @@ public class VehicleDbContext : Microsoft.EntityFrameworkCore.DbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Vehicle>().ToTable("vehicles");
         modelBuilder.Entity<Vehicle>().HasKey(v => v.Vin);
         base.OnModelCreating(modelBuilder);
     }

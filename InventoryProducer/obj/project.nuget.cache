@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ju/1IORoc68oAY9uvbtltOVpmsJL7ZyRFIqamJp3uY2JSFx21dl5Gfjw2kXXf++aavo3bf4P9WKptFtVK4sJSg==",
+  "dgSpecHash": "94Zk0A9NX5ysJROJNbk8MV8gIEUCM6YES9CSPw9y+y2BlHrEB6OR+gEA5wDdgmk4XZV6arYB6FspAsp19VgnAQ==",
   "success": true,
   "projectFilePath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryProducer/InventoryProducer.csproj",
   "expectedPackageFiles": [
@@ -8,10 +8,10 @@
     "/home/tsunan/.nuget/packages/dotnetenv/3.1.1/dotnetenv.3.1.1.nupkg.sha512",
     "/home/tsunan/.nuget/packages/efcore.namingconventions/8.0.3/efcore.namingconventions.8.0.3.nupkg.sha512",
     "/home/tsunan/.nuget/packages/librdkafka.redist/2.13.0/librdkafka.redist.2.13.0.nupkg.sha512",
-    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore/8.0.24/microsoft.entityframeworkcore.8.0.24.nupkg.sha512",
-    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.24/microsoft.entityframeworkcore.abstractions.8.0.24.nupkg.sha512",
-    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.24/microsoft.entityframeworkcore.analyzers.8.0.24.nupkg.sha512",
-    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.24/microsoft.entityframeworkcore.relational.8.0.24.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore/8.0.25/microsoft.entityframeworkcore.8.0.25.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.25/microsoft.entityframeworkcore.abstractions.8.0.25.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.25/microsoft.entityframeworkcore.analyzers.8.0.25.nupkg.sha512",
+    "/home/tsunan/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.25/microsoft.entityframeworkcore.relational.8.0.25.nupkg.sha512",
     "/home/tsunan/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "/home/tsunan/.nuget/packages/microsoft.extensions.caching.memory/8.0.1/microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
     "/home/tsunan/.nuget/packages/microsoft.extensions.configuration/1.1.2/microsoft.extensions.configuration.1.1.2.nupkg.sha512",
