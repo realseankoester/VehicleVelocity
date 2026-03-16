@@ -11,7 +11,7 @@ var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
 
 if (!string.IsNullOrEmpty(connectionString) && !string.IsNullOrEmpty(dbPassword))
 {
-    connectionString = connectionString.Replace("PLACEHOLDER", dbPassword);
+    connectionString = connectionString.Replace("DB_PASSWORD", dbPassword);
 }
 else
 {

@@ -21,7 +21,7 @@ public class Vehicle
     public string InspectionNotes { get; set; } = string.Empty;
     
     public string? ImageUrl { get; set; }
-    public string? LocationId { get; set; }
+    public string? LocationID { get; set; }
 
     // --- 3. System Configuration & AI Audit ---
     public int DeploymentPhase { get; set; } // 1 = Passive, 2 = Assisted

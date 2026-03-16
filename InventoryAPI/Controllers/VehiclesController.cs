@@ -27,7 +27,7 @@ public class VehicleController: ControllerBase
     [HttpGet("{vin}")]
     public async Task<ActionResult<Vehicle>> GetVehicle(string vin)
     {
-        var vehicle = await _context.Vehicles.FindAsync();
+        var vehicle = await _context.Vehicles.FindAsync(vin);
 
         if (vehicle == null)
         {

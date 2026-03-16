@@ -101,6 +101,7 @@ async Task ProcessCar(Vehicle car, DbContextOptions<VehicleDbContext> dbOptions)
     // Scouring & Scrubbing
     car.Vin = car.Vin?.ToUpper().Trim() ?? "UNKNOWN-VIN";
     car.InspectionNotes = car.InspectionNotes ?? "Clean/No notes";
+    car.LocationID = car.LocationID?.ToUpper().Trim() ?? "DEFAULT-01";
 
     var auditService = new QualityAuditService();
     var aiVisionService = new ImageAnalysisService(); 
@@ -117,11 +118,14 @@ async Task ProcessCar(Vehicle car, DbContextOptions<VehicleDbContext> dbOptions)
 
     if (car.DeploymentPhase == 2) // Assisted Mode logic
     {
-        car.AuditRecommendation = car.IsHighPriorityAudit ? $"PRIORITY: {audit.RiskReason}" : "Standard Intake";
+        car.AuditRecommendation = car.IsHighPriorityAudit 
+            ? $"🚨 ACTION REQUIRED: {audit.RiskReason}" 
+            : "✅ Proceed with Standard Intake";
+        car.ShadowAction = "N/A - Active Mode";
     }
     else // Passive Mode logic
     {
-        car.IsHighPriorityAudit = false; 
+        car.AuditRecommendation = "N/A - Passive Mode";
         car.ShadowAction = $"AI Insight: {audit.RiskReason}";
     }
 
