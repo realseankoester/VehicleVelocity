@@ -11,3 +11,16 @@
 /home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/Debug/net8.0/refint/VehicleVelocity.Common.dll
 /home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.pdb
 /home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/Debug/net8.0/ref/VehicleVelocity.Common.dll
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/bin/Debug/net8.0/VehicleVelocity.Common.deps.json
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/bin/Debug/net8.0/VehicleVelocity.Common.dll
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/bin/Debug/net8.0/VehicleVelocity.Common.pdb
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.csproj.AssemblyReference.cache
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.GeneratedMSBuildEditorConfig.editorconfig
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.AssemblyInfoInputs.cache
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.AssemblyInfo.cs
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.csproj.CoreCompileInputs.cache
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.sourcelink.json
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.dll
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/refint/VehicleVelocity.Common.dll
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/VehicleVelocity.Common.pdb
+/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/Debug/net8.0/ref/VehicleVelocity.Common.dll

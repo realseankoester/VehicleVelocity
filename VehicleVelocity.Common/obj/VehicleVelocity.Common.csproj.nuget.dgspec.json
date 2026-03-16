@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {}
+    "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {}
   },
   "projects": {
-    "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
+    "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+        "projectUniqueName": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
         "projectName": "VehicleVelocity.Common",
-        "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+        "projectPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
         "packagesPath": "/home/tsunan/.nuget/packages/",
-        "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/",
+        "outputPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/tsunan/.nuget/NuGet/NuGet.Config"
