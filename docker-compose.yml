@@ -5,7 +5,6 @@ services:
     ports:
       - "9092:9092"
     environment:
-      # Use KRAFT mode for a lighter setup
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
       KAFKA_CONTROLLER_QUORUM_VOTERS: "1@localhost:9093"
@@ -15,6 +14,9 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+    networks:
+      - vehicle-network
+
   db:
     image: postgres:15
     container_name: vehiclevelocity_db
@@ -25,7 +27,25 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/postgres_data
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - vehicle-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: vehicle_velocity_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - db
+    networks:
+      - vehicle-network
+
+networks:
+  vehicle-network:
+    driver: bridge
 
 volumes:
   postgres_data:

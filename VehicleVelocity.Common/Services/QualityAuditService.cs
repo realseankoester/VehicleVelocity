@@ -53,57 +53,55 @@ namespace VehicleVelocity.Common.Services
         /// <returns>An AuditResult enriched with processed metrics.</returns>
         public async Task<AuditResult> AnalyzeVehicleAsync(Vehicle car)
         {
-            // Simulation of async AI processing delay.
-            await Task.Delay(100);
+            await Task.Delay(100); 
 
-           int currentScore = 100;
-           var reasons = new List<string>();
+            int currentScore = 100;
+            var reasons = new List<string>();
+            bool isStructuralFailure = false;
 
-           string notes = car.InspectionNotes?.ToLower() ?? "";
-
-           // --- 1. Rule: Mileage Check ---
-           if (car.Mileage > 120000)
+            // 1. Piecewise Mileage Penalty
+            if (car.Mileage <= 120000)
             {
-                currentScore -= 30;
-                reasons.Add("High Mileage Penalty");
+                // Low-to-Mid Mileage: 1pt per 10k miles
+                currentScore -= (car.Mileage / 10000);
+            }
+            else
+            {
+                // High Mileage Cliff: Base 12pt drop + 1pt per 3k miles over 120k
+                int excessMileage = car.Mileage - 120000;
+                currentScore -= (12 + (excessMileage / 3000));
+                reasons.Add("High Mileage Range");
             }
 
-            // --- 2. Rule: Structural & Cosmetic Integrity ---
-            if (notes.Contains("rust"))
+            // 2. Critical Dealbreakers
+            if (car.InspectionNotes?.ToLower().Contains("rust") == true)
             {
-                currentScore -= 70;
-                reasons.Add("Corrosion Detected");
+                currentScore -= 45;
+                reasons.Add("STRUCTURAL RUST");
+                isStructuralFailure = true;
+            }
+            
+            if (car.InspectionNotes?.ToLower().Contains("frame") == true || 
+                car.InspectionNotes?.ToLower().Contains("leak") == true)
+            {
+                currentScore -= 40;
+                reasons.Add("MECHANICAL/FRAME RISK");
+                isStructuralFailure = true;
             }
 
-            if (notes.Contains("rip") || notes.Contains("tear"))
-            {
-                currentScore -= 50;
-                reasons.Add("Damage to interior, repair needed");
-            }
+            // 3. Score Normalization
+            currentScore = Math.Max(0, currentScore);
 
-            if (notes.Contains("dirt") || notes.Contains("residue"))
-            {
-                currentScore -= 20;
-                reasons.Add("Interior or exterior could use cleaning");
-            }
-
-            // --- 3. Priority Mapping ---
-            // 1 = Critical (Immediate Lead Specialist Attention)
-            // 2 = High (Scheduled Specialist Review)
-            // 3 = Standard (Automated Path)
-            int priority = currentScore switch
-            {
-                < 60 => 1, // Critical
-                < 85 => 2, // High
-                _    => 3  // Standard
-            };
+            // 4. Priority Logic
+            // Only High Priority if it's a structural failure OR the score is critically low.
+            bool isHighPriority = isStructuralFailure || (currentScore < 45);
 
             return new AuditResult
             {
-                QualityScore = Math.Max(0, currentScore), // Ensure score doesn't go negative
-                IsHighPriorityAudit = currentScore < 70,
+                QualityScore = currentScore,
+                IsHighPriorityAudit = isHighPriority,
                 RiskReason = reasons.Count > 0 ? string.Join(", ", reasons) : "Clear",
-                PriorityLevel = priority
+                PriorityLevel = isHighPriority ? 1 : (car.Mileage > 120000 ? 2 : 3)
             };
         }
     }

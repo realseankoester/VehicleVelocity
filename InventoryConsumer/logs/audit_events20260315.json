@@ -1,0 +1,412 @@
+{"@t":"2026-03-15T23:34:13.8964010Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-15T23:34:22.3162117Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8148","Score":100}
+{"@t":"2026-03-15T23:34:22.8492766Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6425","Score":100}
+{"@t":"2026-03-15T23:34:23.2746956Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5052","Score":100}
+{"@t":"2026-03-15T23:34:23.7766690Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9504","Score":100}
+{"@t":"2026-03-15T23:34:24.2951421Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8704","Score":100}
+{"@t":"2026-03-15T23:34:24.8056184Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9970","Score":70}
+{"@t":"2026-03-15T23:34:25.3160624Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9288","Score":100}
+{"@t":"2026-03-15T23:34:25.8352641Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5521","Score":100}
+{"@t":"2026-03-15T23:34:26.3546961Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2879","Score":100}
+{"@t":"2026-03-15T23:34:26.8659001Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7710","Score":100}
+{"@t":"2026-03-15T23:34:44.1766322Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8155","Score":100}
+{"@t":"2026-03-15T23:34:44.6882032Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9402","Score":100}
+{"@t":"2026-03-15T23:34:45.1906483Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1421","Score":70}
+{"@t":"2026-03-15T23:34:45.6971087Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5704","Score":70}
+{"@t":"2026-03-15T23:34:46.2158237Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9700","Score":70}
+{"@t":"2026-03-15T23:34:46.7234115Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9667","Score":100}
+{"@t":"2026-03-15T23:34:47.2390315Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6753","Score":100}
+{"@t":"2026-03-15T23:34:47.7466778Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1814","Score":100}
+{"@t":"2026-03-15T23:34:48.2568476Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6309","Score":100}
+{"@t":"2026-03-15T23:34:48.7637450Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5467","Score":100}
+{"@t":"2026-03-15T23:34:52.0680696Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3533","Score":70}
+{"@t":"2026-03-15T23:34:52.5876810Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3779","Score":100}
+{"@t":"2026-03-15T23:34:53.0990530Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7918","Score":100}
+{"@t":"2026-03-15T23:34:53.6075010Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2483","Score":100}
+{"@t":"2026-03-15T23:34:54.1156969Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2868","Score":100}
+{"@t":"2026-03-15T23:34:54.6194307Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9908","Score":100}
+{"@t":"2026-03-15T23:34:55.1479850Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3752","Score":100}
+{"@t":"2026-03-15T23:34:55.6573372Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3419","Score":100}
+{"@t":"2026-03-15T23:34:56.1770466Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4117","Score":100}
+{"@t":"2026-03-15T23:34:56.6969229Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6720","Score":100}
+{"@t":"2026-03-15T23:35:04.0079584Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8928","Score":70}
+{"@t":"2026-03-15T23:35:04.5273276Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2229","Score":100}
+{"@t":"2026-03-15T23:35:05.0279039Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1194","Score":100}
+{"@t":"2026-03-15T23:35:05.5377063Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3458","Score":100}
+{"@t":"2026-03-15T23:35:06.0472598Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7905","Score":100}
+{"@t":"2026-03-15T23:35:06.5581263Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6463","Score":100}
+{"@t":"2026-03-15T23:35:07.0686236Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9108","Score":70}
+{"@t":"2026-03-15T23:35:07.5761546Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1692","Score":100}
+{"@t":"2026-03-15T23:35:08.1251586Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8556","Score":100}
+{"@t":"2026-03-15T23:35:08.6353434Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7100","Score":100}
+{"@t":"2026-03-15T23:35:19.4577697Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8924","Score":70}
+{"@t":"2026-03-15T23:35:19.9725478Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9824","Score":100}
+{"@t":"2026-03-15T23:35:20.4843255Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9256","Score":70}
+{"@t":"2026-03-15T23:35:20.9885901Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7175","Score":100}
+{"@t":"2026-03-15T23:35:21.5021382Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8117","Score":100}
+{"@t":"2026-03-15T23:35:22.0134085Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5128","Score":100}
+{"@t":"2026-03-15T23:35:22.5277970Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6580","Score":100}
+{"@t":"2026-03-15T23:35:23.0452346Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8945","Score":100}
+{"@t":"2026-03-15T23:35:23.5551534Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9566","Score":100}
+{"@t":"2026-03-15T23:35:24.0630437Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2303","Score":100}
+{"@t":"2026-03-15T23:42:45.7958751Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-15T23:42:45.8182921Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-15T23:52:34.9225146Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-15T23:52:45.2814416Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4627","Score":76}
+{"@t":"2026-03-15T23:52:45.8277560Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1754","Score":93}
+{"@t":"2026-03-15T23:52:46.2530946Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-6736","Score":63,"Reason":"Clear"}
+{"@t":"2026-03-15T23:52:46.7595926Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7369","Score":52,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:52:47.2655297Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3109","Score":52,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:52:47.7724658Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1125","Score":81}
+{"@t":"2026-03-15T23:52:48.2796810Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6137","Score":93}
+{"@t":"2026-03-15T23:52:48.7878677Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3000","Score":60,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:52:49.2948227Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9324","Score":84}
+{"@t":"2026-03-15T23:52:49.8014939Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5176","Score":95}
+{"@t":"2026-03-15T23:53:01.7137880Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5346","Score":49,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:02.2237791Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3789","Score":71,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:02.7341468Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7891","Score":67,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:03.2537799Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6055","Score":79}
+{"@t":"2026-03-15T23:53:03.7642016Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2118","Score":90}
+{"@t":"2026-03-15T23:53:04.2844924Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3779","Score":79}
+{"@t":"2026-03-15T23:53:04.8042814Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3542","Score":76}
+{"@t":"2026-03-15T23:53:05.3124332Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7450","Score":69,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:05.8341323Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-6542","Score":74,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:06.3452494Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7253","Score":41,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:38.5080792Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5334","Score":65,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:39.0075615Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7518","Score":54,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:39.5282066Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9624","Score":87}
+{"@t":"2026-03-15T23:53:40.0616303Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5561","Score":98}
+{"@t":"2026-03-15T23:53:40.5786817Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1837","Score":48,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:41.0812901Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1578","Score":88}
+{"@t":"2026-03-15T23:53:41.6090996Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1920","Score":48,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:42.1003285Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5703","Score":66,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:42.6140890Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-6362","Score":59,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:43.1200263Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5728","Score":43,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:50.8589217Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6682","Score":78}
+{"@t":"2026-03-15T23:53:51.3666422Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3821","Score":64,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:51.8785496Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1939","Score":59,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:52.3897575Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-9735","Score":58,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:52.8994728Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-9934","Score":47,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:53.4122053Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-9311","Score":64,"Reason":"Clear"}
+{"@t":"2026-03-15T23:53:53.9302993Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8381","Score":98}
+{"@t":"2026-03-15T23:53:54.4317345Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-9837","Score":56,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:54.9425347Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1807","Score":44,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:53:55.4516098Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1859","Score":93}
+{"@t":"2026-03-15T23:58:52.9093315Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4047","Score":77}
+{"@t":"2026-03-15T23:58:53.4359137Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5262","Score":91}
+{"@t":"2026-03-15T23:58:53.9463646Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1042","Score":67,"Reason":"Clear"}
+{"@t":"2026-03-15T23:58:54.4528789Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2391","Score":92}
+{"@t":"2026-03-15T23:58:54.9658543Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1093","Score":84}
+{"@t":"2026-03-15T23:58:55.4726821Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-4053","Score":47,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:58:55.9852193Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7768","Score":49,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:58:56.4971492Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1991","Score":56,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:58:57.0064453Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-9570","Score":70,"Reason":"Clear"}
+{"@t":"2026-03-15T23:58:57.5259220Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7158","Score":88}
+{"@t":"2026-03-15T23:59:08.9665663Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3866","Score":41,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:59:09.4860061Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5952","Score":98}
+{"@t":"2026-03-15T23:59:09.9859418Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-6586","Score":70,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:10.5454863Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5056","Score":88}
+{"@t":"2026-03-15T23:59:11.0453169Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-2196","Score":66,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:11.5627894Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-2878","Score":48,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:59:12.0699699Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1970","Score":64,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:12.5885523Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2452","Score":79}
+{"@t":"2026-03-15T23:59:13.0959807Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-4206","Score":69,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:13.6166670Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-6062","Score":48,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:59:22.4157717Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7743","Score":48,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:59:22.9228695Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3735","Score":93}
+{"@t":"2026-03-15T23:59:23.4355487Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1992","Score":66,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:23.9463347Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-6434","Score":74,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:24.4537292Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1641","Score":96}
+{"@t":"2026-03-15T23:59:24.9667583Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3560","Score":45,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:59:25.4752890Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9449","Score":85}
+{"@t":"2026-03-15T23:59:25.9959883Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-1297","Score":63,"Reason":"Clear"}
+{"@t":"2026-03-15T23:59:26.5035967Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-2456","Score":56,"Reason":"High Mileage"}
+{"@t":"2026-03-15T23:59:27.0158801Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8533","Score":90}
+{"@t":"2026-03-16T00:06:20.0095802Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5461","Score":72,"Reason":"Clear"}
+{"@t":"2026-03-16T00:06:20.5055829Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-8505","Score":49,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:06:21.0112634Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5228","Score":72,"Reason":"Clear"}
+{"@t":"2026-03-16T00:06:21.5237768Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-4479","Score":71,"Reason":"Clear"}
+{"@t":"2026-03-16T00:06:22.0334256Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1969","Score":87}
+{"@t":"2026-03-16T00:06:22.5404528Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6677","Score":79}
+{"@t":"2026-03-16T00:06:23.0500084Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5272","Score":59,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:06:23.5629496Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3780","Score":64,"Reason":"Clear"}
+{"@t":"2026-03-16T00:06:24.0829688Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7381","Score":71,"Reason":"Clear"}
+{"@t":"2026-03-16T00:06:24.5833117Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5900","Score":81}
+{"@t":"2026-03-16T00:08:23.3007943Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-8997","Score":51,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:08:23.8227213Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-3868","Score":41,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:08:24.3384507Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3883","Score":81}
+{"@t":"2026-03-16T00:08:24.8520848Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-8027","Score":73,"Reason":"Clear"}
+{"@t":"2026-03-16T00:08:25.3705968Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-7666","Score":54,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:08:25.8823604Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5198","Score":44,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:08:26.4008781Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1025","Score":89}
+{"@t":"2026-03-16T00:08:26.9118799Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-2637","Score":50,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:08:27.4210201Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-5844","Score":44,"Reason":"High Mileage"}
+{"@t":"2026-03-16T00:08:27.9406512Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-4950","Score":70,"Reason":"Clear"}
+{"@t":"2026-03-16T00:12:34.1418995Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-16T00:12:34.1618184Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-16T00:12:54.1818705Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-16T00:13:07.5669500Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3467","Score":44}
+{"@t":"2026-03-16T00:13:08.1263691Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8145","Score":76}
+{"@t":"2026-03-16T00:13:08.5464662Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8482","Score":75}
+{"@t":"2026-03-16T00:13:09.0563120Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4928","Score":48}
+{"@t":"2026-03-16T00:13:09.5758964Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4697","Score":44}
+{"@t":"2026-03-16T00:13:10.0868357Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5996","Score":95}
+{"@t":"2026-03-16T00:13:10.5959789Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4804","Score":45}
+{"@t":"2026-03-16T00:13:11.1068226Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9694","Score":81}
+{"@t":"2026-03-16T00:13:11.6519645Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4317","Score":92}
+{"@t":"2026-03-16T00:13:12.1627939Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4110","Score":86}
+{"@t":"2026-03-16T00:13:18.3996593Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2468","Score":66}
+{"@t":"2026-03-16T00:13:18.9113149Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2878","Score":96}
+{"@t":"2026-03-16T00:13:19.4178982Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4423","Score":68}
+{"@t":"2026-03-16T00:13:19.9234380Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7193","Score":56}
+{"@t":"2026-03-16T00:13:20.4317840Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4124","Score":56}
+{"@t":"2026-03-16T00:13:20.9390990Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8286","Score":41}
+{"@t":"2026-03-16T00:13:21.4472491Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7796","Score":45}
+{"@t":"2026-03-16T00:13:21.9619920Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1654","Score":51}
+{"@t":"2026-03-16T00:13:22.4709434Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2140","Score":81}
+{"@t":"2026-03-16T00:13:22.9786551Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3124","Score":76}
+{"@t":"2026-03-16T00:13:38.8416579Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1405","Score":69}
+{"@t":"2026-03-16T00:13:39.3507666Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8048","Score":67}
+{"@t":"2026-03-16T00:13:39.8614898Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8985","Score":41}
+{"@t":"2026-03-16T00:13:40.3717557Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7321","Score":44}
+{"@t":"2026-03-16T00:13:40.8914472Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2994","Score":58}
+{"@t":"2026-03-16T00:13:41.4013091Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8641","Score":74}
+{"@t":"2026-03-16T00:13:41.9901464Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3633","Score":82}
+{"@t":"2026-03-16T00:13:42.4991566Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3143","Score":42}
+{"@t":"2026-03-16T00:13:43.0099448Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3492","Score":91}
+{"@t":"2026-03-16T00:13:43.5080569Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5875","Score":84}
+{"@t":"2026-03-16T00:19:19.6595726Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-16T00:19:19.6775153Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-16T00:20:08.6609878Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-16T00:20:19.3194502Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4186","Score":89}
+{"@t":"2026-03-16T00:20:19.8496519Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4689","Score":98}
+{"@t":"2026-03-16T00:20:20.2825255Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7810","Score":89}
+{"@t":"2026-03-16T00:20:20.7898356Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1989","Score":89}
+{"@t":"2026-03-16T00:20:21.3008928Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5514","Score":93}
+{"@t":"2026-03-16T00:20:21.8191492Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2987","Score":92}
+{"@t":"2026-03-16T00:20:22.3390764Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7810","Score":92}
+{"@t":"2026-03-16T00:20:22.8391635Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5351","Score":97}
+{"@t":"2026-03-16T00:20:23.3490320Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6691","Score":92}
+{"@t":"2026-03-16T00:20:23.8582245Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4097","Score":99}
+{"@t":"2026-03-16T00:20:28.4382325Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6740","Score":91}
+{"@t":"2026-03-16T00:20:28.9594262Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5661","Score":91}
+{"@t":"2026-03-16T00:20:29.4585614Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8282","Score":93}
+{"@t":"2026-03-16T00:20:29.9688905Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6284","Score":95}
+{"@t":"2026-03-16T00:20:30.4885935Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2620","Score":94}
+{"@t":"2026-03-16T00:20:30.9990114Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9304","Score":95}
+{"@t":"2026-03-16T00:20:31.4999592Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6133","Score":92}
+{"@t":"2026-03-16T00:20:32.0077932Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6850","Score":94}
+{"@t":"2026-03-16T00:20:32.5283154Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5188","Score":97}
+{"@t":"2026-03-16T00:20:33.0390006Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2970","Score":98}
+{"@t":"2026-03-16T00:20:38.6287420Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3062","Score":88}
+{"@t":"2026-03-16T00:20:39.1390981Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8412","Score":96}
+{"@t":"2026-03-16T00:20:39.6592074Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7495","Score":94}
+{"@t":"2026-03-16T00:20:40.1690830Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4568","Score":93}
+{"@t":"2026-03-16T00:20:40.6890427Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2762","Score":80}
+{"@t":"2026-03-16T00:20:41.1888138Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3630","Score":91}
+{"@t":"2026-03-16T00:20:41.6992222Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7654","Score":91}
+{"@t":"2026-03-16T00:20:42.2193597Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5438","Score":98}
+{"@t":"2026-03-16T00:20:42.8052466Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5354","Score":90}
+{"@t":"2026-03-16T00:20:43.3118045Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8476","Score":92}
+{"@t":"2026-03-16T00:20:46.0365199Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9697","Score":83}
+{"@t":"2026-03-16T00:20:46.5523139Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8603","Score":99}
+{"@t":"2026-03-16T00:20:47.0640421Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4887","Score":100}
+{"@t":"2026-03-16T00:20:47.5736484Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5787","Score":79}
+{"@t":"2026-03-16T00:20:48.0811486Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9995","Score":99}
+{"@t":"2026-03-16T00:20:48.5997654Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7171","Score":96}
+{"@t":"2026-03-16T00:20:49.1064157Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5165","Score":97}
+{"@t":"2026-03-16T00:20:49.6179301Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2122","Score":89}
+{"@t":"2026-03-16T00:20:50.1244052Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6117","Score":89}
+{"@t":"2026-03-16T00:20:50.6328142Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7491","Score":82}
+{"@t":"2026-03-16T00:20:57.9639674Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9159","Score":95}
+{"@t":"2026-03-16T00:20:58.4742137Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9557","Score":88}
+{"@t":"2026-03-16T00:20:58.9843379Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6439","Score":85}
+{"@t":"2026-03-16T00:20:59.4947145Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1138","Score":92}
+{"@t":"2026-03-16T00:21:00.0141912Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2162","Score":93}
+{"@t":"2026-03-16T00:21:00.5227336Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5331","Score":85}
+{"@t":"2026-03-16T00:21:01.0436509Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-4677","Score":91}
+{"@t":"2026-03-16T00:21:01.5633971Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-2751","Score":91}
+{"@t":"2026-03-16T00:21:02.0640871Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-8428","Score":95}
+{"@t":"2026-03-16T00:21:02.5743523Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1735","Score":93}
+{"@t":"2026-03-16T00:21:05.2839164Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-3692","Score":91}
+{"@t":"2026-03-16T00:21:05.7936819Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-5453","Score":92}
+{"@t":"2026-03-16T00:21:06.3041544Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6575","Score":97}
+{"@t":"2026-03-16T00:21:06.8335668Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6386","Score":81}
+{"@t":"2026-03-16T00:21:07.3439005Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9373","Score":94}
+{"@t":"2026-03-16T00:21:07.8544448Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6874","Score":89}
+{"@t":"2026-03-16T00:21:08.3842685Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-1550","Score":80}
+{"@t":"2026-03-16T00:21:08.8743496Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-7471","Score":84}
+{"@t":"2026-03-16T00:21:09.4040475Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-9540","Score":87}
+{"@t":"2026-03-16T00:21:09.9061680Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-6629","Score":88}
+{"@t":"2026-03-16T00:36:50.9568515Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-16T00:36:50.9751766Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-16T00:37:32.4338972Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-16T00:37:59.3726526Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-88284","Score":87}
+{"@t":"2026-03-16T00:37:59.9126036Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-26347","Score":100}
+{"@t":"2026-03-16T00:38:00.2226010Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-84960","Score":94}
+{"@t":"2026-03-16T00:38:00.5327910Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-31412","Score":86}
+{"@t":"2026-03-16T00:38:00.9449983Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-57734","Score":100}
+{"@t":"2026-03-16T00:38:01.3634349Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-85074","Score":49,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:38:01.7726379Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-22411","Score":99}
+{"@t":"2026-03-16T00:38:02.1825236Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-10512","Score":86}
+{"@t":"2026-03-16T00:38:02.6024613Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-65009","Score":98}
+{"@t":"2026-03-16T00:38:03.0022390Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-63357","Score":93}
+{"@t":"2026-03-16T00:38:03.4121777Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-24329","Score":94}
+{"@t":"2026-03-16T00:38:03.8224680Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-46944","Score":99}
+{"@t":"2026-03-16T00:38:04.2430608Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-87545","Score":83}
+{"@t":"2026-03-16T00:38:04.6420667Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-19210","Score":97}
+{"@t":"2026-03-16T00:38:05.0629056Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-29078","Score":89}
+{"@t":"2026-03-16T00:38:05.4624748Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-90128","Score":12,"Reason":"STRUCTURAL RUST, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:38:05.8828089Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-46978","Score":89}
+{"@t":"2026-03-16T00:38:06.2827072Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-70400","Score":76}
+{"@t":"2026-03-16T00:38:06.6928042Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-57282","Score":57,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:38:07.1126921Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-13335","Score":95}
+{"@t":"2026-03-16T00:38:31.0569330Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-47979","Score":97}
+{"@t":"2026-03-16T00:38:31.4767875Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-23135","Score":100}
+{"@t":"2026-03-16T00:38:31.8975713Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-89485","Score":12,"Reason":"STRUCTURAL RUST, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:38:32.2966834Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-73258","Score":80}
+{"@t":"2026-03-16T00:38:32.7172986Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-60950","Score":96}
+{"@t":"2026-03-16T00:38:33.1178474Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-75221","Score":96}
+{"@t":"2026-03-16T00:38:33.5363220Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-80735","Score":92}
+{"@t":"2026-03-16T00:38:33.9376004Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-41627","Score":84}
+{"@t":"2026-03-16T00:38:34.3569637Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-59229","Score":89}
+{"@t":"2026-03-16T00:38:34.7571571Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-97898","Score":91}
+{"@t":"2026-03-16T00:38:35.1777668Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-48833","Score":90}
+{"@t":"2026-03-16T00:38:35.5766970Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-88139","Score":55,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:38:35.9970725Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-47825","Score":98}
+{"@t":"2026-03-16T00:38:36.4068009Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-53259","Score":94}
+{"@t":"2026-03-16T00:38:36.8166942Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-72343","Score":99}
+{"@t":"2026-03-16T00:38:37.2166992Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-86465","Score":59,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:38:37.6245237Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-92346","Score":89}
+{"@t":"2026-03-16T00:38:38.0468115Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-70559","Score":89}
+{"@t":"2026-03-16T00:38:38.4573689Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-21166","Score":95}
+{"@t":"2026-03-16T00:38:38.8668148Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-76625","Score":89}
+{"@t":"2026-03-16T00:39:33.3911785Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-16T00:39:33.4092679Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-16T00:40:03.7587278Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-16T00:40:13.4579226Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-81037","Score":86}
+{"@t":"2026-03-16T00:40:13.9754934Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-50518","Score":95}
+{"@t":"2026-03-16T00:40:14.2956397Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-31641","Score":96}
+{"@t":"2026-03-16T00:40:14.6457109Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-82623","Score":96}
+{"@t":"2026-03-16T00:40:15.0556047Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-12217","Score":97}
+{"@t":"2026-03-16T00:40:15.5230586Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-14080","Score":98}
+{"@t":"2026-03-16T00:40:15.9329906Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-65729","Score":93}
+{"@t":"2026-03-16T00:40:16.3345614Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-95688","Score":100}
+{"@t":"2026-03-16T00:40:16.7490617Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-90535","Score":94}
+{"@t":"2026-03-16T00:40:17.1523420Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-93350","Score":100}
+{"@t":"2026-03-16T00:40:17.5601512Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-70204","Score":92}
+{"@t":"2026-03-16T00:40:17.9758164Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-40490","Score":91}
+{"@t":"2026-03-16T00:40:18.3838834Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-54719","Score":87}
+{"@t":"2026-03-16T00:40:18.7929181Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-72696","Score":91}
+{"@t":"2026-03-16T00:40:19.2051847Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-87967","Score":91}
+{"@t":"2026-03-16T00:40:19.6049633Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-20203","Score":94}
+{"@t":"2026-03-16T00:40:20.0196555Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-90518","Score":91}
+{"@t":"2026-03-16T00:40:20.4361343Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-57885","Score":90}
+{"@t":"2026-03-16T00:40:20.8321818Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-54676","Score":90}
+{"@t":"2026-03-16T00:40:21.2399704Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-66991","Score":96}
+{"@t":"2026-03-16T00:40:25.8295437Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-70269","Score":99}
+{"@t":"2026-03-16T00:40:26.2426705Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-38835","Score":82}
+{"@t":"2026-03-16T00:40:26.6532027Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-28285","Score":93}
+{"@t":"2026-03-16T00:40:27.0627641Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-29593","Score":94}
+{"@t":"2026-03-16T00:40:27.4728604Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-49739","Score":99}
+{"@t":"2026-03-16T00:40:27.8835554Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-29868","Score":85}
+{"@t":"2026-03-16T00:40:28.2933321Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-70880","Score":77}
+{"@t":"2026-03-16T00:40:28.7033041Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-17127","Score":94}
+{"@t":"2026-03-16T00:40:29.1135264Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-82070","Score":95}
+{"@t":"2026-03-16T00:40:29.5235896Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-25137","Score":12,"Reason":"STRUCTURAL RUST, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:40:29.9328810Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-99710","Score":85}
+{"@t":"2026-03-16T00:40:30.3428730Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-96345","Score":91}
+{"@t":"2026-03-16T00:40:30.7627748Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-16731","Score":98}
+{"@t":"2026-03-16T00:40:31.1734743Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-22435","Score":93}
+{"@t":"2026-03-16T00:40:31.5829302Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-83557","Score":79}
+{"@t":"2026-03-16T00:40:31.9831828Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-27361","Score":85}
+{"@t":"2026-03-16T00:40:32.3930056Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-39955","Score":93}
+{"@t":"2026-03-16T00:40:32.8230135Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-67058","Score":99}
+{"@t":"2026-03-16T00:40:33.2235811Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-63924","Score":83}
+{"@t":"2026-03-16T00:40:33.6329717Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-37030","Score":90}
+{"@t":"2026-03-16T00:40:55.7407995Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"QUTO","Score":99}
+{"@t":"2026-03-16T00:40:59.5355904Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-39578","Score":83}
+{"@t":"2026-03-16T00:40:59.9445742Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-10377","Score":93}
+{"@t":"2026-03-16T00:41:00.3554431Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-53041","Score":43,"Reason":"High Mileage Range, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:41:00.7758843Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-97081","Score":55,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T00:41:01.1758637Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-96951","Score":99}
+{"@t":"2026-03-16T00:41:01.5861143Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-59263","Score":89}
+{"@t":"2026-03-16T00:41:02.0051220Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-63317","Score":95}
+{"@t":"2026-03-16T00:41:02.4053081Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-25782","Score":96}
+{"@t":"2026-03-16T00:41:02.8157386Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-29733","Score":97}
+{"@t":"2026-03-16T00:41:03.2356188Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-94929","Score":95}
+{"@t":"2026-03-16T00:41:03.6340686Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-66723","Score":97}
+{"@t":"2026-03-16T00:41:04.0555995Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-93934","Score":89}
+{"@t":"2026-03-16T00:41:04.4652588Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-58744","Score":99}
+{"@t":"2026-03-16T00:41:04.8754229Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-14590","Score":94}
+{"@t":"2026-03-16T00:41:05.2753655Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-65259","Score":87}
+{"@t":"2026-03-16T00:41:05.6949569Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-90186","Score":91}
+{"@t":"2026-03-16T00:41:06.1048244Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-48617","Score":76}
+{"@t":"2026-03-16T00:41:06.5052024Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-14650","Score":94}
+{"@t":"2026-03-16T00:41:06.9148702Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-15475","Score":92}
+{"@t":"2026-03-16T00:41:07.3253941Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-11326","Score":96}
+{"@t":"2026-03-16T01:12:50.6760539Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-16T01:12:50.6964858Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-16T01:38:32.3197084Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-16T01:38:47.3042266Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-64116","Score":99}
+{"@t":"2026-03-16T01:38:47.8529829Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-84500","Score":97}
+{"@t":"2026-03-16T01:38:48.1727696Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-25314","Score":97}
+{"@t":"2026-03-16T01:38:48.4831454Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-14993","Score":82}
+{"@t":"2026-03-16T01:38:48.9039633Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-83136","Score":92}
+{"@t":"2026-03-16T01:38:49.3033975Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-91445","Score":91}
+{"@t":"2026-03-16T01:38:49.7132435Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-63760","Score":89}
+{"@t":"2026-03-16T01:38:50.1333102Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-53782","Score":94}
+{"@t":"2026-03-16T01:38:50.5323841Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-36677","Score":99}
+{"@t":"2026-03-16T01:38:50.9423018Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-80632","Score":93}
+{"@t":"2026-03-16T01:38:51.3534412Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-67241","Score":84}
+{"@t":"2026-03-16T01:38:51.7534091Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-30844","Score":97}
+{"@t":"2026-03-16T01:38:52.1718729Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-23454","Score":90}
+{"@t":"2026-03-16T01:38:52.5726596Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-89247","Score":97}
+{"@t":"2026-03-16T01:38:52.9925010Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-46549","Score":91}
+{"@t":"2026-03-16T01:38:53.4122569Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-79131","Score":94}
+{"@t":"2026-03-16T01:38:53.8123534Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-31080","Score":97}
+{"@t":"2026-03-16T01:38:54.2367658Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-40686","Score":54,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:38:54.6319530Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-76750","Score":95}
+{"@t":"2026-03-16T01:38:55.0631788Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-13837","Score":92}
+{"@t":"2026-03-16T01:38:57.9744420Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-50772","Score":97}
+{"@t":"2026-03-16T01:38:58.3887019Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-66673","Score":96}
+{"@t":"2026-03-16T01:38:58.7940592Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-18209","Score":90}
+{"@t":"2026-03-16T01:38:59.2041763Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-30433","Score":53,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:38:59.6145695Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-96024","Score":91}
+{"@t":"2026-03-16T01:39:00.0309348Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-90606","Score":91}
+{"@t":"2026-03-16T01:39:00.4371509Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-53710","Score":90}
+{"@t":"2026-03-16T01:39:00.8463352Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-31996","Score":57,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:39:01.2659526Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-82777","Score":92}
+{"@t":"2026-03-16T01:39:01.6787595Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-41551","Score":100}
+{"@t":"2026-03-16T01:39:02.0863771Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-97591","Score":90}
+{"@t":"2026-03-16T01:39:02.4927989Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-56012","Score":98}
+{"@t":"2026-03-16T01:39:02.9001052Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-19191","Score":82}
+{"@t":"2026-03-16T01:39:03.3097194Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-74032","Score":86}
+{"@t":"2026-03-16T01:39:03.7166362Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-15946","Score":91}
+{"@t":"2026-03-16T01:39:04.1435636Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-48375","Score":98}
+{"@t":"2026-03-16T01:39:04.5516366Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-42686","Score":99}
+{"@t":"2026-03-16T01:39:04.9707895Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-74534","Score":78}
+{"@t":"2026-03-16T01:39:05.3773348Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-81950","Score":86}
+{"@t":"2026-03-16T01:39:05.7833698Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-65913","Score":94}
+{"@t":"2026-03-16T01:39:10.1244596Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-99302","Score":84}
+{"@t":"2026-03-16T01:39:10.5348544Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-99395","Score":100}
+{"@t":"2026-03-16T01:39:10.9345547Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-74294","Score":94}
+{"@t":"2026-03-16T01:39:11.3539127Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-85733","Score":93}
+{"@t":"2026-03-16T01:39:11.7641993Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-18313","Score":92}
+{"@t":"2026-03-16T01:39:12.1743526Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-18429","Score":42,"Reason":"High Mileage Range, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:39:12.6045674Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-31208","Score":51,"Reason":"MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:39:13.0048890Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-11629","Score":90}
+{"@t":"2026-03-16T01:39:13.4249612Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-93093","Score":94}
+{"@t":"2026-03-16T01:39:13.8343701Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-53600","Score":96}
+{"@t":"2026-03-16T01:39:14.2351296Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-47950","Score":89}
+{"@t":"2026-03-16T01:39:14.6542977Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-74840","Score":46,"Reason":"High Mileage Range, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:39:15.0639357Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"VIN-44260","Score":42,"Reason":"High Mileage Range, MECHANICAL/FRAME RISK"}
+{"@t":"2026-03-16T01:39:15.4757013Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-25457","Score":99}
+{"@t":"2026-03-16T01:39:15.8842536Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-83186","Score":82}
+{"@t":"2026-03-16T01:39:16.2953665Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-20429","Score":84}
+{"@t":"2026-03-16T01:39:16.7047564Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-21351","Score":86}
+{"@t":"2026-03-16T01:39:17.1137619Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-91533","Score":91}
+{"@t":"2026-03-16T01:39:17.5243040Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-43037","Score":100}
+{"@t":"2026-03-16T01:39:17.9341892Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"VIN-26522","Score":94}
+{"@t":"2026-03-16T01:39:52.6222563Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-16T01:39:52.6390779Z","@mt":"GateKeeper: Connection closed. Goodbye!"}

@@ -18,3 +18,9 @@
 {"@t":"2026-03-15T05:11:02.2567863Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"TESTVIN101","Score":30,"Reason":"Corrosion Detected"}
 {"@t":"2026-03-15T05:11:05.8365745Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
 {"@t":"2026-03-15T05:11:05.8520254Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
+{"@t":"2026-03-15T05:44:51.0337569Z","@mt":"VehicleVelocity GateKeeper: Initializing Event Stream Listener"}
+{"@t":"2026-03-15T05:44:51.8711201Z","@mt":"Waiting for Kafka topic 'inventory-updates'..."}
+{"@t":"2026-03-15T05:45:10.3090893Z","@mt":"✅ [PASS] VIN {Vin} | Score: {Score}","Vin":"TESTVIN123","Score":70}
+{"@t":"2026-03-15T05:45:23.2929822Z","@mt":"⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}","@l":"Warning","Vin":"TESTVIN234","Score":30,"Reason":"Corrosion Detected"}
+{"@t":"2026-03-15T06:00:35.7928987Z","@mt":"GateKeeper: Shutdown signal received. Closing connection..."}
+{"@t":"2026-03-15T06:00:35.8173669Z","@mt":"GateKeeper: Connection closed. Goodbye!"}
