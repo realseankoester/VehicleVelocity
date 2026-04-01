@@ -15,9 +15,18 @@ using Serilog.Formatting.Compact;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 // 1. Configuration & Environment Setup
+// Load Environment
 DotNetEnv.Env.Load();
-var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD")?.Trim().Replace("\r", "").Replace("\n", "");
-var connectionString = $"Host=localhost;Database=inventory_db;Username=admin;Password={dbPassword}";
+
+// Pull Variables
+var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+var dbUser = Environment.GetEnvironmentVariable("DB_USER");
+var dbPass = Environment.GetEnvironmentVariable("DB_PASSWORD");
+var kafkaBroker = Environment.GetEnvironmentVariable("KAFKA_BROKER");
+
+// Build Connection String
+var connectionString = $"Host={dbHost};Database={dbName};Username={dbUser};Password={dbPass}";
 
 // 2. Structured Logging Setup
 Log.Logger = new LoggerConfiguration()
