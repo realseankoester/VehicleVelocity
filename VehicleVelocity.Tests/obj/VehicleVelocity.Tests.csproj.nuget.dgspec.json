@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/tsunan/VehicleVelocity/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj": {}
+    "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj": {}
   },
   "projects": {
-    "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
+    "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+        "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
         "projectName": "VehicleVelocity.Common",
-        "projectPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+        "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
         "packagesPath": "/home/tsunan/.nuget/packages/",
-        "outputPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/",
+        "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/tsunan/.nuget/NuGet/NuGet.Config"
@@ -79,14 +79,14 @@
         }
       }
     },
-    "/home/tsunan/VehicleVelocity/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj": {
+    "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tsunan/VehicleVelocity/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj",
+        "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj",
         "projectName": "VehicleVelocity.Tests",
-        "projectPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj",
+        "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj",
         "packagesPath": "/home/tsunan/.nuget/packages/",
-        "outputPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Tests/obj/",
+        "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/tsunan/.nuget/NuGet/NuGet.Config"
@@ -101,8 +101,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
-                "projectPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj"
+              "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
+                "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj"
               }
             }
           }

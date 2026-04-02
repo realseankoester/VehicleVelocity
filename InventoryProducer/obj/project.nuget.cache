@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5qlhqovX7DFyodB8awwWXMG5kf2glRnI5tWSTc4q4cDhlrAGAOXr9x5v6agUr8pYQcOVXBD3t8RbNGudQRv/sg==",
+  "dgSpecHash": "94Zk0A9NX5ysJROJNbk8MV8gIEUCM6YES9CSPw9y+y2BlHrEB6OR+gEA5wDdgmk4XZV6arYB6FspAsp19VgnAQ==",
   "success": true,
-  "projectFilePath": "/home/tsunan/VehicleVelocity/InventoryProducer/InventoryProducer.csproj",
+  "projectFilePath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryProducer/InventoryProducer.csproj",
   "expectedPackageFiles": [
     "/home/tsunan/.nuget/packages/confluent.kafka/2.13.0/confluent.kafka.2.13.0.nupkg.sha512",
     "/home/tsunan/.nuget/packages/dotnetenv/3.1.1/dotnetenv.3.1.1.nupkg.sha512",

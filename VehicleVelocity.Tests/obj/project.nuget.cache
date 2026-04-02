@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1sYkZp7d7e5DjPJPzD9i1wy1lTrRfzEnx9BSX2M/wS8t+S2S4flS6xXHlpKDdbSr38d3xZGTJt2dszNifrQDfw==",
+  "dgSpecHash": "3jbEwbe5bE4i+wN6p0cRC4sX3UkBIN5Wg3JYMKNvifFYW8UOw4sF3vlfXlmR0r3AZqbf3no/byG/sRFoDTINvQ==",
   "success": true,
-  "projectFilePath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj",
+  "projectFilePath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Tests/VehicleVelocity.Tests.csproj",
   "expectedPackageFiles": [
     "/home/tsunan/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/home/tsunan/.nuget/packages/dotnetenv/3.1.1/dotnetenv.3.1.1.nupkg.sha512",

@@ -5389,11 +5389,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+      "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
       "projectName": "VehicleVelocity.Common",
-      "projectPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
+      "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj",
       "packagesPath": "/home/tsunan/.nuget/packages/",
-      "outputPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/obj/",
+      "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/tsunan/.nuget/NuGet/NuGet.Config"

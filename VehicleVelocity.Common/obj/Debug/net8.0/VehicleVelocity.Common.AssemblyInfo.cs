@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VehicleVelocity.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+289e6eec309c2d27f3c7b671e7c6189a5aaafd29")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f753fd0e7bc90905c4ae68509e82a29b6a0494ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("VehicleVelocity.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VehicleVelocity.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

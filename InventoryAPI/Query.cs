@@ -1,6 +1,7 @@
 using VehicleVelocity.Common.Data;
 using VehicleVelocity.Common.Models;
 using Microsoft.EntityFrameworkCore;
+using HotChocolate;
 
 namespace InventoryAPI;
 
@@ -8,10 +9,11 @@ public class Query
 {
     [UseFiltering]
     [UseSorting]
-    public IQueryable<Vehicle> GetVehicles(IDbContextFactory<VehicleDbContext> factory) 
+    [UseProjection]
+    public IQueryable<Vehicle> GetVehicles([Service] VehicleDbContext context) 
     {
         
-        var context = factory.CreateDbContext();
-        return context.Vehicles;
+        return context.Vehicles.AsNoTracking();
+      
     }
 }

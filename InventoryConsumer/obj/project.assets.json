@@ -7400,11 +7400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tsunan/VehicleVelocity/InventoryConsumer/InventoryConsumer.csproj",
+      "projectUniqueName": "/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/InventoryConsumer.csproj",
       "projectName": "InventoryConsumer",
-      "projectPath": "/home/tsunan/VehicleVelocity/InventoryConsumer/InventoryConsumer.csproj",
+      "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/InventoryConsumer.csproj",
       "packagesPath": "/home/tsunan/.nuget/packages/",
-      "outputPath": "/home/tsunan/VehicleVelocity/InventoryConsumer/obj/",
+      "outputPath": "/home/tsunan/workspace/VehicleVelocityProject/InventoryConsumer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/tsunan/.nuget/NuGet/NuGet.Config"
@@ -7419,8 +7419,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
-              "projectPath": "/home/tsunan/VehicleVelocity/VehicleVelocity.Common/VehicleVelocity.Common.csproj"
+            "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj": {
+              "projectPath": "/home/tsunan/workspace/VehicleVelocityProject/VehicleVelocity.Common/VehicleVelocity.Common.csproj"
             }
           }
         }

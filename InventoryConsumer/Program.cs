@@ -41,6 +41,10 @@ Log.Information("VehicleVelocity GateKeeper: Initializing Event Stream Listener"
 var optionsBuilder = new DbContextOptionsBuilder<VehicleDbContext>();
 optionsBuilder.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
 
+// DLQ Producer Setup
+var dlqConfig = new ProducerConfig { BootstrapServers = kafkaBroker };
+using var dlqProducer = new ProducerBuilder<Null, string>(dlqConfig).Build();
+
 // Startup Migration (Run once)
 using (var startupContext = new VehicleDbContext(optionsBuilder.Options))
 {
@@ -49,7 +53,7 @@ using (var startupContext = new VehicleDbContext(optionsBuilder.Options))
 
 var config = new ConsumerConfig
 {
-    BootstrapServers = "127.0.0.1:9092",
+    BootstrapServers = kafkaBroker,
     GroupId = "inventory-gatekeeper-group",
     AutoOffsetReset = AutoOffsetReset.Earliest,
     EnableAutoCommit = true,
@@ -63,34 +67,46 @@ consumer.Subscribe("inventory-updates");
 var cts = new CancellationTokenSource();
 Console.CancelKeyPress += (_, e) => { e.Cancel = true; cts.Cancel(); };
 
+string dlqTopic = "inventory-updates-failed";
+
 try
 {
     while (!cts.IsCancellationRequested)
     {
+        // 1. Consume the message
+        ConsumeResult<Ignore, string>? result = null;
         try
         {
-            // By passing the token here, it throws the exception we want to catch outside
-            var result = consumer.Consume(cts.Token);
+            result = consumer.Consume(cts.Token);
             if (result == null) continue;
-
-            var car = JsonSerializer.Deserialize<Vehicle>(result.Message.Value);
-            if (car != null)
-            {
-                await ProcessCar(car, optionsBuilder.Options);
-            }
         }
         catch (ConsumeException e) when (e.Error.Code == ErrorCode.UnknownTopicOrPart)
         {
             Log.Information("Waiting for Kafka topic 'inventory-updates'...");
-            // Use Task.Delay with the token to allow immediate exit if Ctrl+C is hit here
             await Task.Delay(5000, cts.Token);
+            continue;
         }
-        catch (Exception ex) when (!(ex is OperationCanceledException)) 
+
+        // 2. INNER TRY-CATCH: The "Safety Net" for individual car processing
+        try
         {
-            // This 'when' clause is the secret sauce. 
-            // It prevents the "Operation Canceled" from being logged as a scary red Error.
-            Log.Error(ex, "Error during consumption or processing");
-            await Task.Delay(1000, cts.Token);
+            var car = JsonSerializer.Deserialize<Vehicle>(result.Message.Value);
+            if (car != null)
+            {
+                // Scrubbing, Audit, and DB Save
+                await ProcessCar(car, optionsBuilder.Options);
+            }
+        }
+        catch (Exception ex) when (!(ex is OperationCanceledException))
+        {
+            // If we are here, the DB save failed or the AI vision service crashed
+            Log.Error(ex, "CRITICAL: VIN processing failed. Shunting to Dead Letter Queue (DLQ).");
+
+            // Redirect the raw message to the failure topic
+            var dlqMessage = new Message<Null, string> { Value = result.Message.Value };
+            await dlqProducer.ProduceAsync(dlqTopic, dlqMessage);
+            
+            Log.Information("Message successfully shunted to {Topic}", dlqTopic);
         }
     }
 }
