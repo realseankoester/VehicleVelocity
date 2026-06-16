@@ -36,13 +36,15 @@ public class VehicleSemanticAnalysisService : IVehicleSemanticAnalysisService
 
         try
         {
-            var response = await _aiClient.CompleteAsync(new[]
+            // 1. Invoke the stable response method signature
+            var response = await _aiClient.GetResponseAsync(new[]
             {
                 new ChatMessage(ChatRole.System, systemPrompt),
                 new ChatMessage(ChatRole.User, $"Analyze these notes: '{notes}'")
             });
 
-            string aiText = response.Message.Text ?? string.Empty;
+            // 2. Access the text directly via the clean stable property sequence
+            string aiText = response.Text ?? string.Empty;
 
             bool hasDamage = aiText.Contains("DAMAGE_FOUND: true", StringComparison.OrdinalIgnoreCase);
             
