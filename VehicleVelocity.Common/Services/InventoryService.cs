@@ -1,46 +1,61 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Linq;
 using VehicleVelocity.Common.Models;
 
 namespace VehicleVelocity.Common.Services;
 
 /// <summary>
-/// Service for managing the initial intake and validation of vehicle inventory.
+/// Container holding the immutable results of an intake validation pass.
 /// </summary>
+public record ValidationResult(bool IsValid, IReadOnlyCollection<string> Errors);
+
 public interface IInventoryService
 {
-    bool ValidateIntake(Vehicle vehicle, out List<string> errors);
-    Task<string> GenerateIntakeBatchIdAsync();
+    /// <summary>
+    /// Performs defensive validation on a vehicle before it is published to Kafka.
+    /// </summary>
+    ValidationResult ValidateIntake(Vehicle vehicle);
+    
+    /// <summary>
+    /// Generates a unique tracking ID for the current intake session.
+    /// </summary>
+    string GenerateIntakeBatchId();
 }
 
 public class InventoryService : IInventoryService
 {
-    /// <summary>
-    /// Performs basic validation on a vehicle before it is published to the event stream.
-    /// </summary>
-    public bool ValidateIntake(Vehicle vehicle, out List<string> errors)
+    public ValidationResult ValidateIntake(Vehicle vehicle)
     {
-        errors = new List<string>();
+        if (vehicle == null) throw new ArgumentNullException(nameof(vehicle));
+        
+        var errors = new List<string>();
 
-        if (string.IsNullOrWhiteSpace(vehicle.Vin) || vehicle.Vin.Length < 11)
-            errors.Add("Invalid VIN: Must be at least 11 characters.");
+        // 1. VIN Format Guardrail (11-17 characters standard)
+        if (string.IsNullOrWhiteSpace(vehicle.Vin) || vehicle.Vin.Length < 11 || vehicle.Vin.Length > 17)
+        {
+            errors.Add("Invalid VIN: Must be a standard length between 11 and 17 alphanumeric characters.");
+        }
 
-        if (vehicle.Year < 1900 || vehicle.Year > DateTime.Now.Year + 1)
-            errors.Add("Invalid Year: Please check the vehicle manufacturing date.");
+        // 2. Year Boundary Guardrail (Uses UtcNow to avoid localized server clock shifts)
+        int currentYear = DateTime.UtcNow.Year;
+        if (vehicle.Year < 1900 || vehicle.Year > currentYear + 1)
+        {
+            errors.Add($"Invalid Year: Vehicle manufacturing year must be between 1900 and {currentYear + 1}.");
+        }
 
+        // 3. Telemetry Boundary Guardrail
         if (vehicle.Mileage < 0)
-            errors.Add("Invalid Mileage: Value cannot be negative.");
+        {
+            errors.Add("Invalid Mileage: Odometer values cannot be negative.");
+        }
 
-        return errors.Count == 0;
+        return new ValidationResult(errors.Count == 0, errors.AsReadOnly());
     }
 
-    /// <summary>
-    /// Generates a unique tracking ID for the current intake session.
-    /// </summary>
-    public async Task<string> GenerateIntakeBatchIdAsync()
+    public string GenerateIntakeBatchId()
     {
-        await Task.Delay(10); // Simulate light work
-        return $"BATCH-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}";
+        // Allocation-Free / Cleaner Guid slicing using modern Span/string interpolation patterns
+        return $"BATCH-{Guid.NewGuid().ToString()[..8].ToUpperInvariant()}";
     }
 }

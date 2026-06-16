@@ -1,20 +1,29 @@
-# .NET ignore
+# ==========================================
+# 1. .NET BUILD & COMPILER ARTIFACTS
+# ==========================================
 [Bb]in/
-[Ob]j/
+[Oo]bj/
 *.user
 *.userosscache
 *.sln.docuser
 
-# Visual Studio Code
+# ==========================================
+# 2. IDE & WORKSPACE CONFIGURATIONS
+# ==========================================
+.vs/
 .vscode/
+*.suo
 
-# Operating System
+# ==========================================
+# 3. DIAGNOSTICS & OPERATING SYSTEM JUNK
+# ==========================================
 .DS_Store
 Thumbs.db
+compiler_errors.txt
 
-# App Settings (where we might put DB passwords later)
+# ==========================================
+# 4. SECURITY, CREDENTIALS & SITES (CRITICAL)
+# ==========================================
 appsettings.json
-
-# Secrets
 .env
 *.env

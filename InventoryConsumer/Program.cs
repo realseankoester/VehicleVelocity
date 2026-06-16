@@ -1,5 +1,4 @@
 ﻿using Confluent.Kafka;
-using Confluent.Kafka.Admin;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
@@ -12,23 +11,25 @@ using VehicleVelocity.Common.Data;
 using Polly;
 using Serilog;
 using Serilog.Formatting.Compact;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using Microsoft.Extensions.AI; // Added: Brings in Microsoft's standard AI abstractions
+using OllamaSharp;            // Added: Provides the concrete provider for your local Ollama engine
 
-// 1. Configuration & Environment Setup
-// Load Environment
+// ==========================================
+// 1. CONFIGURATION & ENVIRONMENT SETUP
+// ==========================================
 DotNetEnv.Env.Load();
 
-// Pull Variables
 var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
 var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 var dbUser = Environment.GetEnvironmentVariable("DB_USER");
 var dbPass = Environment.GetEnvironmentVariable("DB_PASSWORD");
 var kafkaBroker = Environment.GetEnvironmentVariable("KAFKA_BROKER");
 
-// Build Connection String
 var connectionString = $"Host={dbHost};Database={dbName};Username={dbUser};Password={dbPass}";
 
-// 2. Structured Logging Setup
+// ==========================================
+// 2. STRUCTURED LOGGING SETUP
+// ==========================================
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
@@ -37,7 +38,9 @@ Log.Logger = new LoggerConfiguration()
 
 Log.Information("VehicleVelocity GateKeeper: Initializing Event Stream Listener");
 
-// 3. Database & Kafka Configuration
+// ==========================================
+// 3. DATABASE & KAFKA INFRASTRUCTURE CONFIG
+// ==========================================
 var optionsBuilder = new DbContextOptionsBuilder<VehicleDbContext>();
 optionsBuilder.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
 
@@ -45,12 +48,29 @@ optionsBuilder.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
 var dlqConfig = new ProducerConfig { BootstrapServers = kafkaBroker };
 using var dlqProducer = new ProducerBuilder<Null, string>(dlqConfig).Build();
 
-// Startup Migration (Run once)
+// Startup Migration (Self-healing database routine)
 using (var startupContext = new VehicleDbContext(optionsBuilder.Options))
 {
     await startupContext.Database.MigrateAsync();
 }
 
+// ==========================================
+// 4. PIPELINE SERVICE LIFETIME INITIATION (The Crucial Addition)
+// ==========================================
+// Line-by-Line Breakdown of this new section:
+// A. We create a single, persistent HTTP channel pointing to your Vivobook's local Ollama endpoint.
+IChatClient ollamaClient = new OllamaApiClient(new Uri("http://localhost:11434/"), "llama3.2");
+
+// B. We pass that client directly into our semantic agent wrapper. It will reuse this reference indefinitely.
+var semanticAiService = new VehicleSemanticAnalysisService(ollamaClient);
+
+// C. We initialize our math and simulation blocks as long-lived, high-performance worker singletons.
+var auditService = new QualityAuditService();
+var aiVisionService = new ImageAnalysisService();
+
+// ==========================================
+// 5. KAFKA CONSUMER BOOTSTRAPPING
+// ==========================================
 var config = new ConsumerConfig
 {
     BootstrapServers = kafkaBroker,
@@ -63,17 +83,18 @@ var config = new ConsumerConfig
 using var consumer = new ConsumerBuilder<Ignore, string>(config).Build();
 consumer.Subscribe("inventory-updates");
 
-// 4. Main Consumption Loop
 var cts = new CancellationTokenSource();
 Console.CancelKeyPress += (_, e) => { e.Cancel = true; cts.Cancel(); };
 
 string dlqTopic = "inventory-updates-failed";
 
+// ==========================================
+// 6. MAIN CONSUMPTION STREAM LOOP
+// ==========================================
 try
 {
     while (!cts.IsCancellationRequested)
     {
-        // 1. Consume the message
         ConsumeResult<Ignore, string>? result = null;
         try
         {
@@ -87,22 +108,22 @@ try
             continue;
         }
 
-        // 2. INNER TRY-CATCH: The "Safety Net" for individual car processing
+        // INNER TRY-CATCH: The message execution safety net
         try
         {
             var car = JsonSerializer.Deserialize<Vehicle>(result.Message.Value);
             if (car != null)
             {
-                // Scrubbing, Audit, and DB Save
-                await ProcessCar(car, optionsBuilder.Options);
+                // CRITICAL CORRECTION (Line 97 fixed): 
+                // We now supply every single dependency required by the signature contract
+                // in the exact order they are defined. Compiler error CS7036 is completely resolved.
+                await ProcessCar(car, optionsBuilder.Options, auditService, aiVisionService, semanticAiService);
             }
         }
         catch (Exception ex) when (!(ex is OperationCanceledException))
         {
-            // If we are here, the DB save failed or the AI vision service crashed
             Log.Error(ex, "CRITICAL: VIN processing failed. Shunting to Dead Letter Queue (DLQ).");
 
-            // Redirect the raw message to the failure topic
             var dlqMessage = new Message<Null, string> { Value = result.Message.Value };
             await dlqProducer.ProduceAsync(dlqTopic, dlqMessage);
             
@@ -120,56 +141,72 @@ finally
     Log.Information("GateKeeper: Connection closed. Goodbye!");
 }
 
-// 5. Audit & Persistence Logic
-async Task ProcessCar(Vehicle car, DbContextOptions<VehicleDbContext> dbOptions)
+// ==========================================
+// 7. AUDIT & PERSISTENCE ORCHESTRATION LOGIC
+// ==========================================
+async Task ProcessCar(
+    Vehicle car, 
+    DbContextOptions<VehicleDbContext> dbOptions,
+    QualityAuditService auditor,
+    ImageAnalysisService vision,
+    IVehicleSemanticAnalysisService semanticAI) 
 {
-    // Scouring & Scrubbing
-    car.Vin = car.Vin?.ToUpper().Trim() ?? "UNKNOWN-VIN";
-    car.InspectionNotes = car.InspectionNotes ?? "Clean/No notes";
-    car.LocationID = car.LocationID?.ToUpper().Trim() ?? "DEFAULT-01";
+    // Sanitize inbound text values
+    car.Vin = car.Vin?.ToUpperInvariant().Trim() ?? "UNKNOWN-VIN";
+    car.InspectionNotes = string.IsNullOrWhiteSpace(car.InspectionNotes) ? "Clean/No notes" : car.InspectionNotes;
+    car.LocationID = car.LocationID?.ToUpperInvariant().Trim() ?? "DEFAULT-01";
 
-    var auditService = new QualityAuditService();
-    var aiVisionService = new ImageAnalysisService(); 
-
-    // Perform Automated Audits
-    var audit = await auditService.AnalyzeVehicleAsync(car);
-    car.AIAuditNotes = await aiVisionService.AnalyzeImageAsync(car.ImageUrl ?? "");
+    // 1. Invoke your local Vivobook AI Agent to extract context semantically
+    var aiInsight = await semanticAI.AnalyzeInspectionNotesAsync(car.InspectionNotes);
     
-    // Map Audit Results
+    // Save the text summary generated by Llama 3.2 into your data entity
+    car.AIAuditNotes = aiInsight.ExtractionSummary;
+
+    // 2. Pass that AI boolean result directly into the high-performance audit math engine
+    var audit = auditor.AnalyzeVehicle(car, aiInsight.HasStructuralDamage);
+    
+    // 3. Map out the computed business fields
     car.QualityScore = audit.QualityScore;
     car.PriorityLevel = audit.PriorityLevel;
     car.RiskReason = audit.RiskReason;
-    car.IsHighPriorityAudit = audit.IsHighPriorityAudit; 
+    
+    // Execute simulated vision processing
+    car.AIAuditNotes += $" | [Vision]: {await vision.AnalyzeImageAsync(car.ImageUrl ?? "")}";
 
-    if (car.DeploymentPhase == 2) // Assisted Mode logic
+    // Manage Deployment Modes for the UI dashboard
+    if (car.DeploymentPhase == DeploymentPhase.Assisted) 
     {
         car.AuditRecommendation = car.IsHighPriorityAudit 
             ? $"🚨 ACTION REQUIRED: {audit.RiskReason}" 
             : "✅ Proceed with Standard Intake";
         car.ShadowAction = "N/A - Active Mode";
     }
-    else // Passive Mode logic
+    else 
     {
         car.AuditRecommendation = "N/A - Passive Mode";
         car.ShadowAction = $"AI Insight: {audit.RiskReason}";
     }
 
-    // Logging
+    // Log the unified operational metrics
     if (car.IsHighPriorityAudit)
-        Log.Warning("⚠️  [PRIORITY] VIN {Vin} | Score: {Score} | Reason: {Reason}", car.Vin, car.QualityScore, car.RiskReason);
+        Log.Warning("⚠️  [PRIORITY EVENT] VIN {Vin} flagged. Score: {Score} | Reason: {Reason}", car.Vin, car.QualityScore, car.RiskReason);
     else
-        Log.Information("✅ [PASS] VIN {Vin} | Score: {Score}", car.Vin, car.QualityScore);
+        Log.Information("✅ [PASS] VIN {Vin} cleared. Score: {Score}", car.Vin, car.QualityScore);
 
-    // Database Persistence with Polly
+    // 4. Persistence execution via resilient Polly retry framework
     var retryPolicy = Policy.Handle<Exception>()
         .WaitAndRetryAsync(3, i => TimeSpan.FromSeconds(Math.Pow(2, i)));
 
+    using var dbContext = new VehicleDbContext(dbOptions);
+
     await retryPolicy.ExecuteAsync(async () =>
     {
-        using var dbContext = new VehicleDbContext(dbOptions);
         var existing = await dbContext.Vehicles.FindAsync(car.Vin);
-        if (existing == null) dbContext.Vehicles.Add(car);
-        else dbContext.Entry(existing).CurrentValues.SetValues(car);
+        if (existing == null) 
+            dbContext.Vehicles.Add(car);
+        else 
+            dbContext.Entry(existing).CurrentValues.SetValues(car);
+            
         await dbContext.SaveChangesAsync();
     });
 }

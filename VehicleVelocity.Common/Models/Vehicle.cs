@@ -1,6 +1,13 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace VehicleVelocity.Common.Models;
+
+public enum DeploymentPhase
+{
+    Passive = 1,
+    Assisted = 2
+}
 
 public class Vehicle
 {
@@ -24,10 +31,12 @@ public class Vehicle
     public string? LocationID { get; set; }
 
     // --- 3. System Configuration & AI Audit ---
-    public int DeploymentPhase { get; set; } // 1 = Passive, 2 = Assisted
+    public DeploymentPhase DeploymentPhase { get; set; } = DeploymentPhase.Passive;
     public int QualityScore { get; set; }
+    
     public int PriorityLevel { get; set; } // 1 (Critical) to 3 (Standard)
-    public bool IsHighPriorityAudit { get; set; } // The "GateKeeper" Flag
+
+    public bool IsHighPriorityAudit => PriorityLevel == 1; 
     
     [MaxLength(500)]
     public string? AuditRecommendation { get; set; } 
@@ -48,8 +57,10 @@ public class Vehicle
     public DateTime LastUpdated
     {
         get => _lastUpdated;
-        set => _lastUpdated = value.Kind == DateTimeKind.Utc
-            ? value
-            : DateTime.SpecifyKind(value, DateTimeKind.Utc);
+        set => _lastUpdated = value.Kind switch
+        {
+            DateTimeKind.Utc => value,
+            _ => DateTime.SpecifyKind(value, DateTimeKind.Utc)
+        };
     }
 }

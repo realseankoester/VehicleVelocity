@@ -1,30 +1,30 @@
-using System.IO;
+using System;
 using Microsoft.EntityFrameworkCore;
 using VehicleVelocity.Common.Data;
 using InventoryAPI;
-using Microsoft.Extensions.Configuration; // Add this
 using InventoryAPI.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Direct injection from our helper
+// 1. Database Optimization Configuration
 var connectionString = DbConfig.GetConnectionString();
 
 builder.Services.AddPooledDbContextFactory<VehicleDbContext>(options =>
     options.UseNpgsql(connectionString)
         .UseSnakeCaseNamingConvention());
 
-// 2. Add GraphQL Services
+// 2. Add GraphQL Services (With HotChocolate Engine)
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddProjections()
-    .AddFiltering()
-    .AddSorting();
+    .AddProjections() // Automatically optimizes database SELECT queries based on GraphQL fields requested
+    .AddFiltering()   // Enables complex GraphQL WHERE filtering clauses automatically
+    .AddSorting();    // Enables complex GraphQL ORDER BY clauses automatically
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("OpenPolicy", policy =>
@@ -36,7 +36,8 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-// Global Exception Handler
+
+// 3. Global Exception Handler (Kept neat inline, but gracefully logging)
 app.Use(async (context, next) =>
 {
     try
@@ -45,28 +46,23 @@ app.Use(async (context, next) =>
     }
     catch (Exception ex)
     {
-        // Log the real error
-        Console.WriteLine($"[GLOBAL ERROR]: {ex.Message}");
-        
-        // Return a clean message to the user/frontend
+        Console.WriteLine($"[GLOBAL REST ERROR]: {ex.Message}");
         context.Response.StatusCode = 500;
         await context.Response.WriteAsJsonAsync(new { Error = "An internal service error occurred. Please try again later." });
     }
 });
 
-// 3. Configure Pipeline 
 app.UseCors("OpenPolicy");
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
 }
 
 app.MapControllers();
 
-// 4. Map GraphQL Endpoint
+// Map your GraphQL UI dashboard (Banana Cake Pop) and routing endpoints
 app.MapGraphQL(); 
 
 app.Run();

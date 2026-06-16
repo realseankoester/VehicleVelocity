@@ -1,20 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using VehicleVelocity.Common.Data;
 using VehicleVelocity.Common.Models;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
-using EFCore.NamingConventions;
+using System;
 
 namespace VehicleVelocity.Common.Data;
 
-
-public class VehicleDbContext : Microsoft.EntityFrameworkCore.DbContext
+public class VehicleDbContext : DbContext
 {
     public DbSet<Vehicle> Vehicles => Set<Vehicle>();
-    public VehicleDbContext(DbContextOptions<VehicleVelocity.Common.Data.VehicleDbContext> options) : base(options)
+
+    // Cleaned up the generic type footprint
+    public VehicleDbContext(DbContextOptions<VehicleDbContext> options) : base(options)
     {
     }
 
-    // Update the empty constructor to call OnConfiguring properly
     public VehicleDbContext()
     {
     }
@@ -23,8 +21,7 @@ public class VehicleDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            // 1. Direct, fail-safe connection string for local dev
-            // This ensures that even if .env fails, the property is INITIALIZED.
+            // Fail-safe connection string for local migrations / design-time execution
             var connectionString = "Host=localhost;Port=5432;Database=inventory_db;Username=admin;Password=velocity123";
 
             optionsBuilder
@@ -34,10 +31,11 @@ public class VehicleDbContext : Microsoft.EntityFrameworkCore.DbContext
             Console.WriteLine("[DEBUG] DbContext configured via internal fallback.");
         }
     }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Vehicle>().ToTable("vehicles");
-        modelBuilder.Entity<Vehicle>().HasKey(v => v.Vin);
+        // Fluent API can remain clear since Data Annotations and Npgsql plugins 
+        // are handling the key registration and snake_case mapping automatically.
         base.OnModelCreating(modelBuilder);
     }
 }
